@@ -361,6 +361,7 @@ h6 {
   white-space: normal;
 }
 
+.about-us-container h1,
 .product__title h1,
 h2 {
   margin: 0;
@@ -377,6 +378,7 @@ h2 {
     font-weight: 700;
   }
 
+  .about-us-container h1,
   h2.mob-lrg {
     font-size: 51px;
     line-height: 1em;

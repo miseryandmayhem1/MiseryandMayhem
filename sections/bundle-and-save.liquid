@@ -10,17 +10,38 @@
       <!-- Add to Cart Button and Prices -->
       {% assign product = all_products[section.settings.bundle_product] %}
       {% if product %}
+        {% comment %} Use the specific variant ID provided {% endcomment %}
+        {% assign specific_variant_id = 42385271619719 %}
+        {% assign specific_variant = nil %}
+
+        {% comment %} Find the variant with the specific ID {% endcomment %}
+        {% for variant in product.variants %}
+          {% if variant.id == specific_variant_id %}
+            {% assign specific_variant = variant %}
+            {% break %}
+          {% endif %}
+        {% endfor %}
+
+        {% comment %} Fallback to first variant if the ID isn't found {% endcomment %}
+        {% unless specific_variant %}
+          {% assign specific_variant = product.variants.first %}
+        {% endunless %}
+
         <form method="post" action="/cart/add" class="bundle-form">
-          <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+          <input type="hidden" name="id" value="{{ specific_variant_id }}">
 
           <!-- Add to Cart Button -->
           <button type="submit" class="standard-button">{{ section.settings.button_text }}</button>
 
           <!-- Prices next to button -->
           <div class="price-wrapper">
-            <span class="sale-price text-highlight">{{ product.selected_or_first_available_variant.price | money }}</span>
-            {% if product.selected_or_first_available_variant.compare_at_price > product.selected_or_first_available_variant.price %}
-              <span class="original-price"><s>{{ product.selected_or_first_available_variant.compare_at_price | money }}</s></span>
+            {% if specific_variant %}
+              <span class="sale-price text-highlight">{{ specific_variant.price | money }}</span>
+              {% if specific_variant.compare_at_price > specific_variant.price %}
+                <span class="original-price"><s>{{ specific_variant.compare_at_price | money }}</s></span>
+              {% endif %}
+            {% else %}
+              <span class="sale-price text-highlight">{{ product.price | money }}</span>
             {% endif %}
           </div>
         </form>

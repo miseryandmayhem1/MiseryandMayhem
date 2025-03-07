@@ -1,0 +1,143 @@
+
+
+<div class="page-width about-us-page">
+   <div class="main-contain">
+  <div class="about-us-container">
+    {% if section.settings.title != blank %}
+      <h1 class="about-us-title">{{ section.settings.title }}</h1>
+    {% endif %}
+
+    {% if section.settings.image != blank %}
+      <div class="about-us-image-container">
+        <img
+          srcset="{%- if section.settings.image.width >= 375 -%}{{ section.settings.image | image_url: width: 375 }} 375w,{%- endif -%}
+            {%- if section.settings.image.width >= 750 -%}{{ section.settings.image | image_url: width: 750 }} 750w,{%- endif -%}
+            {%- if section.settings.image.width >= 1100 -%}{{ section.settings.image | image_url: width: 1100 }} 1100w,{%- endif -%}
+            {%- if section.settings.image.width >= 1500 -%}{{ section.settings.image | image_url: width: 1500 }} 1500w,{%- endif -%}
+            {%- if section.settings.image.width >= 2200 -%}{{ section.settings.image | image_url: width: 2200 }} 2200w,{%- endif -%}
+            {%- if section.settings.image.width >= 3000 -%}{{ section.settings.image | image_url: width: 3000 }} 3000w,{%- endif -%}"
+          src="{{ section.settings.image | image_url: width: 1500 }}"
+          sizes="(min-width: 750px) 100vw, 100vw"
+          alt="{{ section.settings.image.alt | escape }}"
+          loading="lazy"
+          width="{{ section.settings.image.width }}"
+          height="{{ section.settings.image.height }}"
+          class="about-us-image"
+        >
+      </div>
+    {% endif %}
+
+    {% if section.settings.content != blank %}
+      <div class="about-us-content rte">
+        {{ section.settings.content }}
+      </div>
+    {% endif %}
+  </div>
+  </div>
+</div>
+
+<style>
+  .about-us-page {
+    margin-top: 40px;
+    margin-bottom: 100px;
+  }
+
+  .about-us-container {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+  }
+
+  .about-us-container h1{
+    margin-bottom: 40px;
+    /* text-align: center;
+    margin-bottom: 2rem;
+    font-size: calc(var(--font-heading-scale) * 3rem);
+    color: var(--color-foreground); */
+
+  }
+
+  .about-us-image-container {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  .about-us-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+  }
+
+  .about-us-content {
+    font-size: 20px;
+    font-weight: 500;
+    max-width: 80%;
+    /* margin: 0 auto; */
+    line-height: 1.55;
+    color: var(--color-foreground);
+  }
+
+  @media screen and (max-width: 749px) {
+    .about-us-page {
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .about-us-container h1 {
+    margin-bottom: 20px;
+    font-size: 38px;
+}
+
+
+
+    .about-us-title {
+      font-size: calc(var(--font-heading-scale) * 2.2rem);
+      margin-bottom: 1.5rem;
+
+    }
+
+    .about-us-image-container {
+      margin-bottom: 1.5rem;
+    }
+
+      .about-us-content {
+    font-size: 16px;
+    max-width: 100%;
+
+  }
+
+  }
+</style>
+
+{% schema %}
+{
+  "name": "About Us",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "About Us"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "richtext",
+      "id": "content",
+      "label": "Text content",
+      "default": "<p>Share your story, mission, values, or team information here. This content can be edited in the Shopify admin.</p>"
+    }
+  ],
+  "presets": [
+    {
+      "name": "About Us"
+    }
+  ]
+}
+{% endschema %}

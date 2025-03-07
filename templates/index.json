@@ -233,6 +233,7 @@
     },
     "bundle-and-save": {
       "type": "bundle-and-save",
+      "disabled": true,
       "settings": {
         "title": "Try all three",
         "description": "Don’t know which flavor to start with or just love them all? Order our limited-time bundle of delicious, protein-packed oats.",
