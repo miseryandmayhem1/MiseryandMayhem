@@ -10,38 +10,54 @@
       <!-- Add to Cart Button and Prices -->
       {% assign product = all_products[section.settings.bundle_product] %}
       {% if product %}
-        {% comment %} Use the specific variant ID provided {% endcomment %}
-        {% assign specific_variant_id = 42385271619719 %}
-        {% assign specific_variant = nil %}
+        {% comment %} Find the specific variant with all 6pk (cheapest bundle) {% endcomment %}
+        {% assign all_6pk_variant = nil %}
+        {% assign lowest_price = 999999.99 %}
 
-        {% comment %} Find the variant with the specific ID {% endcomment %}
+        {% comment %} First attempt: Look for "6 pk / 6 pk / 6 pk" variant {% endcomment %}
         {% for variant in product.variants %}
-          {% if variant.id == specific_variant_id %}
-            {% assign specific_variant = variant %}
+          {% if variant.title == "6 pk / 6 pk / 6 pk" %}
+            {% assign all_6pk_variant = variant %}
             {% break %}
           {% endif %}
         {% endfor %}
 
-        {% comment %} Fallback to first variant if the ID isn't found {% endcomment %}
-        {% unless specific_variant %}
-          {% assign specific_variant = product.variants.first %}
+        {% comment %} Second attempt: Look for variants with "6 pk" in all options {% endcomment %}
+        {% unless all_6pk_variant %}
+          {% for variant in product.variants %}
+            {% if variant.option1 == "6 pk" and variant.option2 == "6 pk" and variant.option3 == "6 pk" %}
+              {% assign all_6pk_variant = variant %}
+              {% break %}
+            {% endif %}
+          {% endfor %}
+        {% endunless %}
+
+        {% comment %} Third attempt: Find the cheapest variant as a fallback {% endcomment %}
+        {% unless all_6pk_variant %}
+          {% for variant in product.variants %}
+            {% if variant.available and variant.price < lowest_price %}
+              {% assign lowest_price = variant.price %}
+              {% assign all_6pk_variant = variant %}
+            {% endif %}
+          {% endfor %}
+        {% endunless %}
+
+        {% comment %} Final fallback to first available variant {% endcomment %}
+        {% unless all_6pk_variant %}
+          {% assign all_6pk_variant = product.selected_or_first_available_variant %}
         {% endunless %}
 
         <form method="post" action="/cart/add" class="bundle-form">
-          <input type="hidden" name="id" value="{{ specific_variant_id }}">
+          <input type="hidden" name="id" value="{{ all_6pk_variant.id }}">
 
           <!-- Add to Cart Button -->
           <button type="submit" class="standard-button">{{ section.settings.button_text }}</button>
 
           <!-- Prices next to button -->
           <div class="price-wrapper">
-            {% if specific_variant %}
-              <span class="sale-price text-highlight">{{ specific_variant.price | money }}</span>
-              {% if specific_variant.compare_at_price > specific_variant.price %}
-                <span class="original-price"><s>{{ specific_variant.compare_at_price | money }}</s></span>
-              {% endif %}
-            {% else %}
-              <span class="sale-price text-highlight">{{ product.price | money }}</span>
+            <span class="sale-price text-highlight">{{ all_6pk_variant.price | money }}</span>
+            {% if all_6pk_variant.compare_at_price > all_6pk_variant.price %}
+              <span class="original-price"><s>{{ all_6pk_variant.compare_at_price | money }}</s></span>
             {% endif %}
           </div>
         </form>
