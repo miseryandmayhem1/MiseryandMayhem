@@ -1624,3 +1624,49 @@ body .customer.account.section-template--16544309117063__main-padding h2 {
 .related-products .price__container {
   display: none !important;
 }
+
+/* bundle css */
+
+/* Bundle Product Price Styling */
+
+.bundle-price-visible {
+  display: none !important;
+}
+
+.dynamic-bundle-price {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background-color: rgba(var(--color-base-accent-1), 0.05);
+}
+
+.bundle-price-heading {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: var(--color-base-text);
+}
+
+.bundle-price-amount {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-foreground);
+}
+
+/* Animation for price updates */
+@keyframes price-update {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.06);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.bundle-price-amount.updating {
+  animation: price-update 0.3s ease-in-out;
+}

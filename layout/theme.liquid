@@ -440,8 +440,15 @@
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
 
+    {% if product.title contains 'Bundle' %}
+  {{ 'bundle-price-calculator.js' | asset_url | defer="defer" }}
+{% endif %}
+
 
     <script src="{{ 'custom.js' | asset_url }}"></script>
+
+
+
 
   </body>
 </html>

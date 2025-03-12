@@ -1,0 +1,136 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "bundle_price_script": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<script>\n  document.addEventListener('DOMContentLoaded', function() {\n    // Add event listeners to quantity buttons and input\n    const quantityInput = document.querySelector('input[name=\"quantity\"]');\n    const priceElements = document.querySelectorAll('.price');\n    const priceElement = priceElements[0]; // First price element\n    const quantityButtons = document.querySelectorAll('.quantity__button');\n    \n    if (quantityInput && priceElement) {\n      const basePrice = {{ product.price }};\n      \n      // Update price on input change\n      quantityInput.addEventListener('change', updateBundlePrice);\n      quantityInput.addEventListener('input', updateBundlePrice);\n      \n      // Update price when quantity buttons are clicked\n      if (quantityButtons) {\n        quantityButtons.forEach(button => {\n          button.addEventListener('click', function() {\n            // Use setTimeout to ensure quantity has been updated\n            setTimeout(updateBundlePrice, 10);\n          });\n        });\n      }\n      \n      // Initial price update\n      updateBundlePrice();\n      \n      function updateBundlePrice() {\n        const quantity = parseInt(quantityInput.value, 10) || 1;\n        const totalPrice = basePrice * quantity;\n        \n        // Find the price amount element inside the price container\n        const priceAmountElement = priceElement.querySelector('.price__regular .price-item');\n        if (priceAmountElement) {\n          // Add highlight class\n          priceAmountElement.classList.add('price-updating');\n          \n          // Update the price\n          priceAmountElement.textContent = Shopify.formatMoney(totalPrice, {{ shop.money_format | json }});\n          \n          // Remove highlight class after animation\n          setTimeout(() => {\n            priceAmountElement.classList.remove('price-updating');\n          }, 300);\n        }\n      }\n    }\n  });\n</script>\n\n<style>\n  @keyframes price-update {\n    0% { transform: scale(1); }\n    50% { transform: scale(1.06); }\n    100% { transform: scale(1); }\n  }\n  \n  .price-updating {\n    animation: price-update 0.3s ease-in-out;\n  }\n</style>"
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "none"
+          }
+        },
+        "yotpo_subscriptions_app_block_jQ3VrP": {
+          "type": "shopify://apps/yotpo-subscriptions/blocks/app-block/ef25e582-ada5-4bb0-b4e7-f94e97ab1bb4",
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "share": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "price",
+        "bundle_price_script",
+        "description",
+        "variant_picker",
+        "yotpo_subscriptions_app_block_jQ3VrP",
+        "buy_buttons",
+        "quantity_selector",
+        "share"
+      ],
+      "custom_css": [
+        "@media screen and (min-width: 768px) {.product__info-container {/* padding: 3rem; border-radius: 5px; border: 2px solid green; */ }}"
+      ],
+      "settings": {
+        "enable_sticky_info": false,
+        "color_scheme": "scheme-38af5a64-8703-4a1d-8643-c8b28dea0e88",
+        "media_size": "medium",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "gallery_layout": "thumbnail",
+        "media_position": "left",
+        "image_zoom": "none",
+        "mobile_thumbnails": "hide",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "settings": {
+        "heading": "Try Another Flavor",
+        "heading_size": "h2",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "color_scheme": "scheme-38af5a64-8703-4a1d-8643-c8b28dea0e88",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "bundle_and_save_6Ce6EF": {
+      "type": "bundle-and-save",
+      "disabled": true,
+      "settings": {
+        "title": "Try all three",
+        "description": "Don't know which flavor to start with or just love them all? Order our limited-time bundle of delicious, protein-packed oats.",
+        "second_description": "<strong>6 Apple Cinnamon<br>\n6 Classic<br>\n6 Maple</strong>",
+        "bundle_product": "oatmeal-bundle",
+        "bundle_image": "shopify://shop_images/bundle-new_c1c5afa7-700f-40a0-929c-2945d06c90d7.png",
+        "button_text": "Add to Cart",
+        "color_scheme": ""
+      }
+    },
+    "home_email_cANeJm": {
+      "type": "home-email",
+      "settings": {
+        "header_title": "Join the mayhem",
+        "sub_text": "Join our newsletter to stay updated.",
+        "button_text": "Join Now"
+      }
+    },
+    "17358434865c296c80": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "related-products",
+    "bundle_and_save_6Ce6EF",
+    "home_email_cANeJm",
+    "17358434865c296c80"
+  ]
+}
