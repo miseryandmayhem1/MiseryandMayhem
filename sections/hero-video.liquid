@@ -16,8 +16,17 @@
   </video>
 
   <div class="hero-content">
-    <div class="hero-header-text">
+        {% comment %} <div class="hero-header-text">
+      <h1>Not your grandma’s oatmeal</h1>
+
+        <div class="hero-header-subtext">(unless she deadlifts) </div>
+
+    </div> {% endcomment %}
+   <div class="hero-header-text">
       <h1>{{ section.settings.header_text }}</h1>
+      {% if section.settings.header_subtext != blank %}
+        <div class="hero-header-subtext">{{ section.settings.header_subtext }}</div>
+      {% endif %}
     </div>
 
     <div class="hero-subcontent">
@@ -75,6 +84,13 @@
     },
     {
       "type": "text",
+      "id": "header_subtext",
+      "label": "Header Subtext",
+      "default": "The best protein oatmeal around",
+      "info": "Appears below the main heading"
+    },
+    {
+      "type": "text",
       "id": "subheader_text",
       "label": "Subheader Text",
       "default": "Discover our latest products"
@@ -100,6 +116,7 @@
         "autoplay": true,
         "loop": true,
         "header_text": "Welcome to Our Store",
+        "header_subtext": "Premium quality products made just for you",
         "subheader_text": "Discover our latest products",
         "button_link": "/collections/all",
         "button_text": "Shop Now"
@@ -157,7 +174,10 @@
   font-size: 50px;
   line-height: 1.15em;
   margin: 0;
+  margin-bottom: 10px;
 }
+
+
 
 .hero-subcontent {
   position: absolute;
@@ -203,9 +223,12 @@
     font-size: 34px;
     line-height: 1.15em;
     margin: 0;
+    margin-bottom: 8px;
     max-width: 204px;
     padding-top: 48px;
   }
+
+
 
   .hero-subcontent {
     position: static;

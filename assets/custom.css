@@ -621,6 +621,16 @@ h2 {
   margin: 0;
 }
 
+.hero-header-subtext {
+  color: white;
+  font-size: 21px;
+  line-height: 1.4;
+  margin-top: 0;
+  font-weight: 400;
+  font-family: "Fustat";
+  text-transform: uppercase;
+}
+
 .hero-subcontent {
   position: absolute;
   bottom: 40px;
@@ -665,8 +675,13 @@ h2 {
     font-size: 34px;
     line-height: 1.15em;
     margin: 0;
-    max-width: 204px;
+    max-width: 320px;
     padding-top: 48px;
+  }
+
+  .hero-header-subtext {
+    font-size: 18px;
+    max-width: 100%;
   }
 }
 
