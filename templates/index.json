@@ -3,17 +3,30 @@
     "hero_video": {
       "type": "hero-video",
       "settings": {
-        "desktop_video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/1583daa218c845bdbd613c503c5c4f25.mp4",
-        "desktop_poster": "shopify:\/\/shop_images\/hero-vid2-desktop-poster.jpg",
-        "mobile_video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/b75b29f0f74648d68545c61a354cacba.mp4",
-        "mobile_poster": "shopify:\/\/shop_images\/hero-vid2-mobile-poster.jpg",
+        "media_type": "image",
+        "desktop_video": "",
+        "mobile_video": "",
         "autoplay": true,
         "loop": true,
-        "header_text": "Not your grandma’s oatmeal",
+        "desktop_image": "shopify:\/\/shop_images\/Hero-Desktop.jpg",
+        "mobile_image": "shopify:\/\/shop_images\/Hero-Mobile.jpg",
+        "header_text": "Not your \u2028grandma’s oatmeal",
         "header_subtext": "(unless she deadlifts)",
-        "subheader_text": "Our protein-packed oatmeal is as tough as the day ahead. After breakfast, you’re on your own.",
+        "subheader_text": "Clean recovery nutrition \u2028ready in under 3 minutes",
         "button_link": "shopify:\/\/collections\/oatmeal-collection",
         "button_text": "Buy Oats"
+      }
+    },
+    "bundle-and-save-mobile": {
+      "type": "bundle-and-save-mobile",
+      "settings": {
+        "title": "Try all three",
+        "description": "Don't know which flavor to start with or just love them all? Order our limited-time bundle of delicious, protein-packed oats.",
+        "second_description": "<strong>6 Apple Cinnamon<br>\n6 Classic<br>\n6 Maple<\/strong>",
+        "bundle_product": "oatmeal-bundle",
+        "bundle_image": "shopify:\/\/shop_images\/bundle-new.png",
+        "button_text": "Add to Cart",
+        "color_scheme": "scheme-38af5a64-8703-4a1d-8643-c8b28dea0e88"
       }
     },
     "home-featured-products": {
@@ -69,7 +82,7 @@
           "type": "text_line",
           "settings": {
             "highlighted_text": "LOW SUGAR",
-            "normal_text": "so you don’t crash"
+            "normal_text": "so you don't crash"
           }
         },
         "text_line_3": {
@@ -178,7 +191,7 @@
         "badge_C6aTQd"
       ],
       "settings": {
-        "header_left": "WHAT WE’RE  MADE OF",
+        "header_left": "WHAT WE'RE  MADE OF",
         "header_right": "(besides taste)",
         "color_scheme": "scheme-38af5a64-8703-4a1d-8643-c8b28dea0e88"
       }
@@ -228,7 +241,7 @@
         "review_block_3"
       ],
       "settings": {
-        "title": "Don’t just take it from us",
+        "title": "Don't just take it from us",
         "color_scheme": "default"
       }
     },
@@ -236,10 +249,10 @@
       "type": "bundle-and-save",
       "settings": {
         "title": "Try all three",
-        "description": "Don’t know which flavor to start with or just love them all? Order our limited-time bundle of delicious, protein-packed oats.",
+        "description": "Don't know which flavor to start with or just love them all? Order our limited-time bundle of delicious, protein-packed oats.",
         "second_description": "<strong>6 Apple Cinnamon<br>\n6 Classic<br>\n6 Maple<\/strong>",
         "bundle_product": "oatmeal-bundle",
-        "bundle_image": "shopify:\/\/shop_images\/bundle-new.png",
+        "bundle_image": "shopify:\/\/shop_images\/group-reduced.png",
         "button_text": "Add to Cart",
         "color_scheme": "scheme-38af5a64-8703-4a1d-8643-c8b28dea0e88"
       }
@@ -560,6 +573,7 @@
   },
   "order": [
     "hero_video",
+    "bundle-and-save-mobile",
     "home-featured-products",
     "home-snake-section",
     "home-madeof",

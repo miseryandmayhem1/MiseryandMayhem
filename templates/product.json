@@ -24,7 +24,7 @@
           }
         },
         "yotpo_subscriptions_app_block_jQ3VrP": {
-          "type": "shopify:\/\/apps\/yotpo-subscriptions\/blocks\/app-block\/ef25e582-ada5-4bb0-b4e7-f94e97ab1bb4",
+          "type": "shopify://apps/yotpo-subscriptions/blocks/app-block/ef25e582-ada5-4bb0-b4e7-f94e97ab1bb4",
           "settings": {}
         },
         "buy_buttons": {
@@ -56,7 +56,7 @@
         "share"
       ],
       "custom_css": [
-        "@media screen and (min-width: 768px) {.product__info-container {\/* padding: 3rem; border-radius: 5px; border: 2px solid green; *\/ }}"
+        "@media screen and (min-width: 768px) {.product__info-container {/* padding: 3rem; border-radius: 5px; border: 2px solid green; */ }}"
       ],
       "settings": {
         "enable_sticky_info": false,
@@ -98,9 +98,9 @@
       "settings": {
         "title": "Try all three",
         "description": "Don’t know which flavor to start with or just love them all? Order our limited-time bundle of delicious, protein-packed oats.",
-        "second_description": "<strong>6 Apple Cinnamon<br>\n6 Classic<br>\n6 Maple<\/strong>",
+        "second_description": "<strong>6 Apple Cinnamon<br>\n6 Classic<br>\n6 Maple</strong>",
         "bundle_product": "oatmeal-bundle",
-        "bundle_image": "shopify:\/\/shop_images\/bundle-new_c1c5afa7-700f-40a0-929c-2945d06c90d7.png",
+        "bundle_image": "shopify://shop_images/bundle-new_c1c5afa7-700f-40a0-929c-2945d06c90d7.png",
         "button_text": "Add to Cart",
         "color_scheme": ""
       }

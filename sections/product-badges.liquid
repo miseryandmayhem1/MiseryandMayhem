@@ -1,0 +1,139 @@
+<div class="product-badges-section">
+  {% if section.blocks.size > 0 %}
+    <div class="product-badges-container">
+      {% for block in section.blocks %}
+        {% case block.type %}
+          {% when 'badge' %}
+            <div class="product-badge-item" {{ block.shopify_attributes }}>
+              {% if block.settings.badge_image != blank %}
+                <div class="product-badge-image">
+                  {{ block.settings.badge_image | image_url: width: 100 | image_tag:
+                    loading: 'lazy',
+                    width: block.settings.image_width,
+                    height: block.settings.image_width,
+                    alt: block.settings.badge_title
+                  }}
+                </div>
+              {% endif %}
+              {% if block.settings.badge_title != blank %}
+                <h4 class="product-badge-title">{{ block.settings.badge_title }}</h4>
+              {% endif %}
+              {% if block.settings.badge_text != blank %}
+                <p class="product-badge-text">{{ block.settings.badge_text }}</p>
+              {% endif %}
+            </div>
+        {% endcase %}
+      {% endfor %}
+    </div>
+  {% endif %}
+</div>
+
+<style>
+  .product-badges-section {
+    margin: 20px 0;
+  }
+
+  .product-badges-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 15px;
+  }
+
+  .product-badge-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    flex: 1;
+    min-width: 100px;
+    max-width: 150px;
+  }
+
+  .product-badge-image {
+    margin-bottom: 8px;
+  }
+
+  .product-badge-title {
+    margin: 0 0 5px 0;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .product-badge-text {
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.4;
+  }
+
+  @media screen and (max-width: 768px) {
+    .product-badges-container {
+      justify-content: center;
+    }
+
+    .product-badge-item {
+      min-width: 80px;
+      max-width: 120px;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Product Badges",
+  "settings": [
+  ],
+  "blocks": [
+    {
+      "type": "badge",
+      "name": "Badge",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "badge_image",
+          "label": "Badge Image"
+        },
+        {
+          "type": "range",
+          "id": "image_width",
+          "min": 30,
+          "max": 100,
+          "step": 5,
+          "unit": "px",
+          "label": "Image Width",
+          "default": 50
+        },
+        {
+          "type": "text",
+          "id": "badge_title",
+          "label": "Badge Title",
+          "default": "Feature"
+        },
+        {
+          "type": "text",
+          "id": "badge_text",
+          "label": "Badge Text",
+          "default": "Short description"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product Badges",
+      "blocks": [
+        {
+          "type": "badge"
+        },
+        {
+          "type": "badge"
+        },
+        {
+          "type": "badge"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

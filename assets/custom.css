@@ -608,7 +608,7 @@ h2 {
   position: absolute;
   bottom: 40px;
   left: 40px;
-  max-width: 300px;
+  max-width: 350px;
 }
 
 .hero-header-text h1 {
@@ -623,10 +623,10 @@ h2 {
 
 .hero-header-subtext {
   color: white;
-  font-size: 21px;
+  font-size: 28px;
   line-height: 1.4;
   margin-top: 0;
-  font-weight: 400;
+  font-weight: 600;
   font-family: "Fustat";
   text-transform: uppercase;
 }
@@ -638,6 +638,10 @@ h2 {
   text-align: left;
   max-width: 300px;
   font-weight: 100;
+}
+
+.hero-subcontent p {
+  max-width: 260px;
 }
 
 .hero-button {
@@ -682,6 +686,10 @@ h2 {
   .hero-header-subtext {
     font-size: 18px;
     max-width: 100%;
+  }
+
+  .hero-subcontent p {
+    max-width: 70%;
   }
 }
 
@@ -1339,6 +1347,13 @@ h2 {
   padding: 0px 40px;
 }
 
+.bundle-and-save-mobile-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px 40px;
+}
+
 .bundle-content {
   display: flex;
   justify-content: space-between;
@@ -1684,4 +1699,38 @@ body .customer.account.section-template--16544309117063__main-padding h2 {
 
 .bundle-price-amount.updating {
   animation: price-update 0.3s ease-in-out;
+}
+
+/* conditional home bundle and save */
+
+.bundle-and-save-section {
+  display: block;
+}
+
+.bundle-and-save-mobile-section {
+  display: block;
+}
+
+@media screen and (min-width: 768px) {
+  .bundle-and-save-mobile-section {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .bundle-and-save-section:not(.bundle-and-save-mobile-section) {
+    display: none;
+  }
+}
+
+/* conditional collection hero */
+
+.collection-hero {
+  display: flex;
+}
+
+@media screen and (max-width: 767px) {
+  .collection-hero {
+    display: none;
+  }
 }

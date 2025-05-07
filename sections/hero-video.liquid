@@ -1,28 +1,43 @@
 {{ 'custom.css' | asset_url | stylesheet_tag }}
 
-<section class="hero-video-section">
-  <video
-    id="heroVideo"
-    class="hero-video"
-    {% if section.settings.autoplay %}autoplay{% endif %}
-    {% if section.settings.loop %}loop{% endif %}
-    muted
-    playsinline
-    preload="auto"
-    x-webkit-airplay="allow"
-  >
-    <source src="{{ section.settings.desktop_video }}" type="video/mp4" media="(min-width: 768px)">
-    <source src="{{ section.settings.mobile_video }}" type="video/mp4" media="(max-width: 767px)">
-  </video>
+<section class="hero-section">
+  {% if section.settings.media_type == 'video' %}
+    <video
+      id="heroVideo"
+      class="hero-media hero-video"
+      {% if section.settings.autoplay %}autoplay{% endif %}
+      {% if section.settings.loop %}loop{% endif %}
+      muted
+      playsinline
+      preload="auto"
+      x-webkit-airplay="allow"
+    >
+      <source src="{{ section.settings.desktop_video }}" type="video/mp4" media="(min-width: 768px)">
+      <source src="{{ section.settings.mobile_video }}" type="video/mp4" media="(max-width: 767px)">
+    </video>
+  {% else %}
+    <div class="hero-media hero-image-container">
+      {% if section.settings.desktop_image != blank %}
+        {{ section.settings.desktop_image | image_url: width: 2000 | image_tag:
+           class: 'hero-image desktop-hero-image',
+           loading: 'eager',
+           sizes: '100vw',
+           widths: '375, 550, 750, 1100, 1500, 2000'
+        }}
+      {% endif %}
+      {% if section.settings.mobile_image != blank %}
+        {{ section.settings.mobile_image | image_url: width: 1000 | image_tag:
+           class: 'hero-image mobile-hero-image',
+           loading: 'eager',
+           sizes: '100vw',
+           widths: '375, 550, 750, 1000'
+        }}
+      {% endif %}
+    </div>
+  {% endif %}
 
   <div class="hero-content">
-        {% comment %} <div class="hero-header-text">
-      <h1>Not your grandma’s oatmeal</h1>
-
-        <div class="hero-header-subtext">(unless she deadlifts) </div>
-
-    </div> {% endcomment %}
-   <div class="hero-header-text">
+    <div class="hero-header-text">
       <h1>{{ section.settings.header_text }}</h1>
       {% if section.settings.header_subtext != blank %}
         <div class="hero-header-subtext">{{ section.settings.header_subtext }}</div>
@@ -38,8 +53,29 @@
 
 {% schema %}
 {
-  "name": "Hero Video Section",
+  "name": "Hero Media Section",
   "settings": [
+    {
+      "type": "select",
+      "id": "media_type",
+      "label": "Media Type",
+      "options": [
+        {
+          "value": "image",
+          "label": "Image"
+        },
+        {
+          "value": "video",
+          "label": "Video"
+        }
+      ],
+      "default": "image"
+    },
+    {
+      "type": "header",
+      "content": "Video Settings",
+      "info": "These settings only apply when Media Type is set to Video"
+    },
     {
       "type": "url",
       "id": "desktop_video",
@@ -47,22 +83,10 @@
       "info": "Upload video for desktop devices"
     },
     {
-      "type": "image_picker",
-      "id": "desktop_poster",
-      "label": "Desktop Video Poster",
-      "info": "Shown while the desktop video is loading"
-    },
-    {
       "type": "url",
       "id": "mobile_video",
       "label": "Mobile Video URL",
       "info": "Upload video for mobile devices"
-    },
-    {
-      "type": "image_picker",
-      "id": "mobile_poster",
-      "label": "Mobile Video Poster",
-      "info": "Shown while the mobile video is loading"
     },
     {
       "type": "checkbox",
@@ -77,6 +101,27 @@
       "default": true
     },
     {
+      "type": "header",
+      "content": "Image Settings",
+      "info": "These settings only apply when Media Type is set to Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "desktop_image",
+      "label": "Desktop Image",
+      "info": "Recommended size: 2000px × 800px"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_image",
+      "label": "Mobile Image",
+      "info": "Recommended size: 750px × 1000px"
+    },
+    {
+      "type": "header",
+      "content": "Content Settings"
+    },
+    {
       "type": "text",
       "id": "header_text",
       "label": "Header Text",
@@ -86,7 +131,7 @@
       "type": "text",
       "id": "header_subtext",
       "label": "Header Subtext",
-      "default": "The best protein oatmeal around",
+      "default": "The best products around",
       "info": "Appears below the main heading"
     },
     {
@@ -110,11 +155,10 @@
   ],
   "presets": [
     {
-      "name": "Hero Video Section",
-      "category": "Video",
+      "name": "Hero Media Section",
+      "category": "Media",
       "settings": {
-        "autoplay": true,
-        "loop": true,
+        "media_type": "image",
         "header_text": "Welcome to Our Store",
         "header_subtext": "Premium quality products made just for you",
         "subheader_text": "Discover our latest products",
@@ -127,7 +171,7 @@
 {% endschema %}
 
 {% stylesheet %}
-.hero-video-section {
+.hero-section {
   position: relative;
   width: 100%;
   height: 100vh;
@@ -136,7 +180,7 @@
   background-color: #000000;
 }
 
-.hero-video {
+.hero-media {
   position: absolute;
   top: 0;
   left: 0;
@@ -144,8 +188,29 @@
   right: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
   z-index: 1;
+}
+
+.hero-video {
+  object-fit: cover;
+}
+
+.hero-image-container {
+  height: 100%;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.desktop-hero-image {
+  display: block;
+}
+
+.mobile-hero-image {
+  display: none;
 }
 
 .hero-content {
@@ -177,8 +242,6 @@
   margin-bottom: 10px;
 }
 
-
-
 .hero-subcontent {
   position: absolute;
   bottom: 40px;
@@ -203,7 +266,15 @@
   background-color: #f0f0f0;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
+  .desktop-hero-image {
+    display: none;
+  }
+
+  .mobile-hero-image {
+    display: block;
+  }
+
   .hero-content {
     flex-direction: column;
     justify-content: space-between;
@@ -228,8 +299,6 @@
     padding-top: 48px;
   }
 
-
-
   .hero-subcontent {
     position: static;
     text-align: left;
@@ -245,52 +314,38 @@
 {% javascript %}
 document.addEventListener('DOMContentLoaded', function() {
   const video = document.getElementById('heroVideo');
-  const desktopPoster = `{% if section.settings.desktop_poster %}{{ section.settings.desktop_poster | img_url: 'master' }}{% endif %}`;
-  const mobilePoster = `{% if section.settings.mobile_poster %}{{ section.settings.mobile_poster | img_url: 'master' }}{% endif %}`;
 
-  function setPoster() {
-    if (window.innerWidth >= 768) {
-      video.setAttribute('poster', desktopPoster);
-    } else {
-      video.setAttribute('poster', mobilePoster);
-    }
+  if (video) {
+    // Force play on iOS
+    video.load();
+
+    // Play video after a small delay to ensure loading
+    setTimeout(() => {
+      const playPromise = video.play();
+
+      if (playPromise !== undefined) {
+        playPromise.catch(error => {
+          console.log('Video play error:', error);
+          // Try to play again on user interaction
+          document.addEventListener('touchstart', () => {
+            video.play().catch(e => console.log('Play on touch failed:', e));
+          }, { once: true });
+        });
+      }
+    }, 100);
+
+    // Monitor video state
+    video.addEventListener('playing', () => {
+      console.log('Video is playing');
+    });
+
+    video.addEventListener('waiting', () => {
+      console.log('Video is waiting/buffering');
+    });
+
+    video.addEventListener('error', (e) => {
+      console.log('Video error:', video.error);
+    });
   }
-
-  // Set initial poster
-  setPoster();
-
-  // Update poster on resize
-  window.addEventListener('resize', setPoster);
-
-  // Force play on iOS
-  video.load();
-
-  // Play video after a small delay to ensure loading
-  setTimeout(() => {
-    const playPromise = video.play();
-
-    if (playPromise !== undefined) {
-      playPromise.catch(error => {
-        console.log('Video play error:', error);
-        // Try to play again on user interaction
-        document.addEventListener('touchstart', () => {
-          video.play().catch(e => console.log('Play on touch failed:', e));
-        }, { once: true });
-      });
-    }
-  }, 100);
-
-  // Monitor video state
-  video.addEventListener('playing', () => {
-    console.log('Video is playing');
-  });
-
-  video.addEventListener('waiting', () => {
-    console.log('Video is waiting/buffering');
-  });
-
-  video.addEventListener('error', (e) => {
-    console.log('Video error:', video.error);
-  });
 });
 {% endjavascript %}

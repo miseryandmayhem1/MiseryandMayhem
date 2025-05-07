@@ -1,0 +1,133 @@
+<section class="bundle-and-save-section bundle-and-save-mobile-section color-{{ section.settings.color_scheme }}">
+  <div class="main-contain">
+  <div class="bundle-content">
+    <!-- Left Side: Title, Description, Button, Prices -->
+    <div class="left-content">
+      <h2 class="mob-lrg">{{ section.settings.title }}</h2>
+      <p>{{ section.settings.description }}</p>
+      <p>{{ section.settings.second_description }}</p>
+
+      <!-- Add to Cart Button and Prices -->
+      {% assign product = all_products[section.settings.bundle_product] %}
+      {% if product %}
+        {% comment %} Find the specific variant with all 6pk (cheapest bundle) {% endcomment %}
+        {% assign all_6pk_variant = nil %}
+        {% assign lowest_price = 999999.99 %}
+
+        {% comment %} First attempt: Look for "6 pk / 6 pk / 6 pk" variant {% endcomment %}
+        {% for variant in product.variants %}
+          {% if variant.title == "6 pk / 6 pk / 6 pk" %}
+            {% assign all_6pk_variant = variant %}
+            {% break %}
+          {% endif %}
+        {% endfor %}
+
+        {% comment %} Second attempt: Look for variants with "6 pk" in all options {% endcomment %}
+        {% unless all_6pk_variant %}
+          {% for variant in product.variants %}
+            {% if variant.option1 == "6 pk" and variant.option2 == "6 pk" and variant.option3 == "6 pk" %}
+              {% assign all_6pk_variant = variant %}
+              {% break %}
+            {% endif %}
+          {% endfor %}
+        {% endunless %}
+
+        {% comment %} Third attempt: Find the cheapest variant as a fallback {% endcomment %}
+        {% unless all_6pk_variant %}
+          {% for variant in product.variants %}
+            {% if variant.available and variant.price < lowest_price %}
+              {% assign lowest_price = variant.price %}
+              {% assign all_6pk_variant = variant %}
+            {% endif %}
+          {% endfor %}
+        {% endunless %}
+
+        {% comment %} Final fallback to first available variant {% endcomment %}
+        {% unless all_6pk_variant %}
+          {% assign all_6pk_variant = product.selected_or_first_available_variant %}
+        {% endunless %}
+
+        <form method="post" action="/cart/add" class="bundle-form">
+          <input type="hidden" name="id" value="{{ all_6pk_variant.id }}">
+
+          <!-- Add to Cart Button -->
+          <button type="submit" class="standard-button">{{ section.settings.button_text }}</button>
+
+          <!-- Prices next to button -->
+          <div class="price-wrapper">
+            <span class="sale-price text-highlight">{{ all_6pk_variant.price | money }}</span>
+            {% if all_6pk_variant.compare_at_price > all_6pk_variant.price %}
+              <span class="original-price"><s>{{ all_6pk_variant.compare_at_price | money }}</s></span>
+            {% endif %}
+          </div>
+        </form>
+      {% else %}
+        <p>Product not found. Please select a valid product.</p>
+      {% endif %}
+    </div>
+
+    <!-- Right Side: Image -->
+    <div class="right-content">
+      <img src="{{ section.settings.bundle_image | image_url }}" alt="Bundle Image" class="home-bundle-image" width="" height="">
+    </div>
+
+  </div>
+  </div>
+</section>
+
+
+
+
+{% schema %}
+{
+  "name": "Bundle and Save",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Bundle and Save"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "Get the best value by bundling three of our top products!"
+    },
+    {
+      "type": "textarea",
+      "id": "second_description",
+      "label": "Second Description",
+      "default": "Limited time offer, don't miss out!"
+    },
+    {
+      "type": "product",
+      "id": "bundle_product",
+      "label": "Select Bundle Product"
+    },
+    {
+      "type": "image_picker",
+      "id": "bundle_image",
+      "label": "Bundle Image"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "Add to Cart"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color Scheme",
+      "default": "background-1"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Bundle and Save",
+      "category": "Product"
+    }
+  ]
+}
+{% endschema %}
