@@ -1,0 +1,64 @@
+{% comment %}
+  Render product feature badges
+  Usage:
+  {% render 'product-badges', product: product %}
+{% endcomment %}
+
+<style>
+  .product-badges-section {
+    margin: 20px 0;
+  }
+
+  .product-badges-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 12px;
+    margin-bottom: 30px;
+    padding-right: 0px;
+    padding-left: 0;
+  }
+
+  .product-badge-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding:  0;
+    margin-right: 0px;
+    margin-left: 0;
+  }
+
+  .product-badge-image {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .product-badge-image img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  @media screen and (max-width: 768px) {
+    .product-badges-container {
+      justify-content: flex-start;
+    }
+  }
+</style>
+
+{%- if product.metafields.custom.product_badges -%}
+  <div class="product-badges-section">
+    <div class="product-badges-container">
+      {%- for image in product.metafields.custom.product_badges.value -%}
+        <div class="product-badge-item">
+          <div class="product-badge-image">
+            <img src="{{ image | image_url }}" width="" height="" alt="Product Badge" loading="lazy">
+          </div>
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+{%- endif -%}
