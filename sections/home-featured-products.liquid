@@ -11,7 +11,7 @@
     {% if block.settings.product %}
       <div class="product-column">
         <a class="home-product-link" href="/products/{{ block.settings.product.handle }}">
-          <img src="{{ block.settings.product.featured_image | img_url: '300x' }}" alt="{{ block.settings.product.title }}" width="" height="">
+          <img src="{{ block.settings.product.featured_image | img_url: '600x' }}" alt="{{ block.settings.product.title }}" width="" height="">
           <h3 class="home-featured-product-title">{{ block.settings.product.title }}</h3>
           <p>{{ block.settings.custom_text_1 }}</p>
           <p>{{ block.settings.custom_text_2 }}</p>
