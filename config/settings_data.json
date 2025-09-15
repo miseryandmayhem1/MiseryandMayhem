@@ -169,23 +169,23 @@
     },
     "content_for_index": [],
     "blocks": {
-      "8962992520437913685": {
-        "type": "shopify:\/\/apps\/yotpo-loyalty-rewards\/blocks\/loader-app-embed-block\/2f9660df-5018-4e02-9868-ee1fb88d6ccd",
-        "disabled": false,
-        "settings": {
-          "inject_modules_loader": true,
-          "inject_sdk_loader": false
-        }
-      },
-      "8257630261509358238": {
-        "type": "shopify:\/\/apps\/yotpo-subscriptions\/blocks\/app-embed-block\/ef25e582-ada5-4bb0-b4e7-f94e97ab1bb4",
-        "disabled": false,
-        "settings": {}
-      },
       "7570552984445421165": {
         "type": "shopify:\/\/apps\/yotpo-product-reviews-ugc\/blocks\/settings\/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
         "disabled": false,
         "settings": {}
+      },
+      "8257630261509358238": {
+        "type": "shopify:\/\/apps\/yotpo-subscriptions\/blocks\/app-embed-block\/ef25e582-ada5-4bb0-b4e7-f94e97ab1bb4",
+        "disabled": true,
+        "settings": {}
+      },
+      "8962992520437913685": {
+        "type": "shopify:\/\/apps\/yotpo-loyalty-rewards\/blocks\/loader-app-embed-block\/2f9660df-5018-4e02-9868-ee1fb88d6ccd",
+        "disabled": true,
+        "settings": {
+          "inject_modules_loader": true,
+          "inject_sdk_loader": false
+        }
       }
     },
     "color_schemes": {

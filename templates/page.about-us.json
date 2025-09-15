@@ -8,9 +8,19 @@
         "image_1": "shopify:\/\/shop_images\/scott.jpg",
         "image_2": "shopify:\/\/shop_images\/nick.jpg"
       }
+    },
+    "home_email_JXi3wY": {
+      "type": "home-email",
+      "name": "Email Sub Section",
+      "settings": {
+        "header_title": "Be the First to Know",
+        "sub_text": "Be the first to know when we launch.",
+        "button_text": "Join Now"
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "home_email_JXi3wY"
   ]
 }

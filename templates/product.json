@@ -23,10 +23,6 @@
             "swatch_shape": "none"
           }
         },
-        "yotpo_subscriptions_app_block_jQ3VrP": {
-          "type": "shopify:\/\/apps\/yotpo-subscriptions\/blocks\/app-block\/ef25e582-ada5-4bb0-b4e7-f94e97ab1bb4",
-          "settings": {}
-        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
@@ -50,7 +46,6 @@
         "price",
         "description",
         "variant_picker",
-        "yotpo_subscriptions_app_block_jQ3VrP",
         "buy_buttons",
         "quantity_selector",
         "share"
