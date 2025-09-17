@@ -1,7 +1,7 @@
 {
   "current": {
-    "logo": "shopify:\/\/shop_images\/mm-nav-logo.svg",
-    "logo_width": 190,
+    "logo": "shopify:\/\/shop_images\/dawn-nav-logo.png",
+    "logo_width": 250,
     "favicon": "shopify:\/\/shop_images\/snake-coil-black.png",
     "type_header_font": "noticia_text_n4",
     "heading_scale": 100,
@@ -136,7 +136,7 @@
       "custom-footer": {
         "type": "custom-footer",
         "settings": {
-          "footer_logo": "shopify:\/\/shop_images\/miserymayhem-logo_yellow.png",
+          "footer_logo": "shopify:\/\/shop_images\/dawn-footer-logo.png",
           "link_1": "Oats",
           "link_1_url": "shopify:\/\/collections\/oatmeal-collection",
           "link_2": "",
@@ -153,7 +153,7 @@
           "link_7_url": "shopify:\/\/pages\/privacy-policy",
           "link_8": "Terms & Conditions",
           "link_8_url": "shopify:\/\/pages\/terms-of-service",
-          "copyright_text": "©2025 Misery & Mayhem"
+          "copyright_text": "©2025 Dawnbreaker"
         }
       },
       "collection-hero": {

@@ -4,8 +4,10 @@
     <!-- Left Side: Title, Description, Button, Prices -->
     <div class="left-content">
       <h2 class="mob-lrg">{{ section.settings.title }}</h2>
-      <p>{{ section.settings.description }}</p>
-      <p>{{ section.settings.second_description }}</p>
+      <div class="bundly-text">
+      <p class="bundly-desc">{{ section.settings.description }}</p>
+      <p class="bundly-nums">{{ section.settings.second_description }}</p>
+      </div>
 
       <!-- Add to Cart Button and Prices -->
       {% assign product = all_products[section.settings.bundle_product] %}
@@ -55,7 +57,7 @@
 
           <!-- Prices next to button -->
           <div class="price-wrapper">
-            <span class="sale-price text-highlight">{{ all_6pk_variant.price | money }}</span>
+            <span class="sale-price ">{{ all_6pk_variant.price | money }}</span>
             {% if all_6pk_variant.compare_at_price > all_6pk_variant.price %}
               <span class="original-price"><s>{{ all_6pk_variant.compare_at_price | money }}</s></span>
             {% endif %}

@@ -1,0 +1,274 @@
+<style>
+
+.custom-email-section {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #FCF7EA;
+  box-sizing: border-box;
+}
+
+.email-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: relative;
+  width: 100%;
+  padding: 80px 40px;
+  max-width: 1280px;
+  /* background: #F7CE48; */
+  border-radius: 20px;
+  margin: 0 40px;
+}
+
+.email-title-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 100%;
+}
+
+.email-content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 16px;
+}
+
+.email-content-container p {
+  margin: 0;
+  max-width: 390px;
+  text-transform: uppercase;
+}
+
+.email-header {
+  font-size: 30px;
+  line-height: 1.1em;
+  font-weight: 400;
+  margin: 0;
+  /* text-transform: uppercase; */
+  padding-left: 40px;
+  max-width: 300px;
+}
+
+.newsletter-form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-top: 30px;
+  width: 100%;
+}
+
+.email-input {
+  padding: 14px;
+  font-family: var(--font-body-family);
+  padding-left: 0;
+  font-size: 16px;
+  border: 0 none;
+  background-color: transparent;
+  border-bottom: 1px solid #1A1A1A;
+  margin-right: 10px;
+  width: 300px;
+}
+
+.email-input::placeholder {
+  color: #1A1A1A;
+  opacity: 1;
+}
+
+.email-submit-button {
+  padding: 12px 20px;
+  font-family: var(--font-body-family);
+  font-size: 16px;
+  background-color: #00B7C2;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  /* text-transform: uppercase; */
+  transition: background-color 0.3s ease;
+  white-space: nowrap;
+}
+
+.email-submit-button:hover {
+  background-color: #333;
+}
+
+/* Media Queries */
+
+/* Tablet devices (768px and smaller) */
+@media (max-width: 900px) {
+
+
+  .email-container {
+    grid-template-columns: 1fr 1fr;
+    padding: 80px 20px;
+    margin: 0 20px;
+  }
+
+  .email-header {
+    padding-left: 0;
+    text-align: left;
+    max-width: 800%;
+
+  }
+
+  .email-content-container {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+}
+
+/* Mobile devices (480px and smaller) */
+@media (max-width: 768px) {
+
+
+  .email-container {
+    grid-template-columns: 1fr ;
+  padding: 40px 20px;
+  position: relative;
+  width: 100%;
+  border-radius: 0px;
+  margin: 0;
+}
+
+  .email-header {
+    font-size: 34px;
+    text-align: left;
+
+    margin-bottom: 24px;
+
+  }
+
+  .email-content-container {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .email-content-container p {
+    max-width: 100%;
+  }
+
+  .email-input {
+    width: 100%;
+  }
+
+  .newsletter-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 30px;
+  width: 100%;
+}
+
+.email-input {
+  margin-bottom: 20px;
+}
+
+}
+
+
+</style>
+
+
+{% comment %} <section class="custom-email-section">
+  <div class="email-container">
+
+    <div class="email-title-container">
+      <h2 class="email-header">BE THE FIRST<br>TO KNOW.</h2>
+    </div>
+
+    <div class="email-content-container">
+      <p>Be the first to know when we launch.</p>
+
+      <!-- Display Error or Success Messages -->
+      {% if form.errors %}
+        <p class="form-error">There was an error with your submission. Please try again.</p>
+      {% elsif form.posted_successfully? %}
+        <p class="form-success">Thank you for subscribing!</p>
+      {% endif %}
+
+      <!-- Standard HTML Form for Newsletter -->
+      <form method="post" action="/contact" id="contact_form" accept-charset="UTF-8" class="newsletter-form">
+        <input type="hidden" name="form_type" value="customer">
+        <input type="hidden" name="utf8" value="✓">
+        <input type="hidden" name="contact[tags]" value="newsletter">
+        <input type="email" name="contact[email]" placeholder="Email Address" required class="email-input">
+        <button type="submit" class="email-submit-button">Join Now</button>
+      </form>
+
+    </div>
+
+  </div>
+</section> {% endcomment %}
+
+
+
+<section class="custom-email-section">
+  <div class="email-container">
+
+    <div class="email-title-container">
+      <h2 class="email-header">Be the first to know when we launch</h2>
+    </div>
+
+    <div class="email-content-container">
+      {% comment %} <p>Be the first to know when we launch.</p> {% endcomment %}
+
+<script>
+  document.getElementById('newsletterForm').addEventListener('submit', function(event) {
+  event.preventDefault(); // Prevent the default form submission
+
+  const form = this;
+  const formData = new FormData(form);
+
+  // Clear any previous messages
+  document.getElementById('form-message').innerHTML = '';
+
+  fetch(form.action, {
+    method: 'POST',
+    body: formData,
+    headers: {
+      'Accept': 'application/json',
+    },
+  })
+    .then((response) => {
+      if (response.ok) {
+        return response.json(); // Parse the response if the request was successful
+      } else {
+        throw new Error('Something went wrong');
+      }
+    })
+    .then((data) => {
+      // Show success message
+      document.getElementById('form-message').innerHTML = '<p>Thank you for subscribing!</p>';
+      form.reset(); // Optionally reset the form
+    })
+    .catch((error) => {
+      // Show error message
+      document.getElementById('form-message').innerHTML = '<p>There was an error with your submission. Please try again.</p>';
+    });
+});
+
+</script>
+
+      <!-- Copy the exact form from /pages/contact -->
+     <form method="post" action="/contact" id="newsletterForm" accept-charset="UTF-8" class="footer__newsletter newsletter-form">
+  <input type="hidden" name="form_type" value="customer" />
+  <input type="hidden" name="utf8" value="✓" />
+  <input type="hidden" name="contact[tags]" value="newsletter">
+  <input type="email" name="contact[email]" placeholder="Email Address" required class="email-input">
+  <button type="submit" class="email-submit-button">Join Now</button>
+  <div id="form-message"></div> <!-- Placeholder for success/error message -->
+</form>
+
+    </div>
+
+  </div>
+</section>
+
+
+
+

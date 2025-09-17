@@ -8,11 +8,11 @@
         "mobile_video": "",
         "autoplay": true,
         "loop": true,
-        "desktop_image": "shopify:\/\/shop_images\/Hero-Desktop.jpg",
-        "mobile_image": "shopify:\/\/shop_images\/Hero-Mobile.jpg",
-        "header_text": "Not your \u2028grandma’s oatmeal",
-        "header_subtext": "(unless she deadlifts)",
-        "subheader_text": "Clean recovery nutrition \u2028ready in under 3 minutes",
+        "desktop_image": "shopify:\/\/shop_images\/Home-DesktopHero-withoutBlack.jpg",
+        "mobile_image": "shopify:\/\/shop_images\/Home-MobileHero-withoutBlack.jpg",
+        "header_text": "Meet the new champion of breakfast",
+        "header_subtext": "",
+        "subheader_text": "The best protein oatmeal with nothing to hide.",
         "button_link": "shopify:\/\/collections\/oatmeal-collection",
         "button_text": "Buy Oats"
       }
@@ -36,24 +36,24 @@
           "type": "product",
           "settings": {
             "product": "maple-protein-oatmeal",
-            "custom_text_1": "20G OF PROTEIN",
-            "custom_text_2": "5G OF SUGAR"
+            "custom_text_1": "20g of protein",
+            "custom_text_2": "5g of sugar"
           }
         },
         "product_2": {
           "type": "product",
           "settings": {
             "product": "apple-cinnamon-protein-oatmeal",
-            "custom_text_1": "20G OF PROTEIN",
-            "custom_text_2": "8G OF SUGAR"
+            "custom_text_1": "20g of protein",
+            "custom_text_2": "5g of sugar"
           }
         },
         "product_1": {
           "type": "product",
           "settings": {
             "product": "classic-protein-oatmeal",
-            "custom_text_1": "20G OF PROTEIN",
-            "custom_text_2": "2G OF SUGAR"
+            "custom_text_1": "20g of protein",
+            "custom_text_2": "5g of sugar"
           }
         }
       },
@@ -63,7 +63,7 @@
         "product_1"
       ],
       "settings": {
-        "header_title": "Meet the Oats",
+        "header_title": "Gluten Free Oatmeal with Nothing Artificial",
         "collection": "oatmeal-collection",
         "color_scheme": ""
       }
@@ -74,22 +74,22 @@
         "text_line_1": {
           "type": "text_line",
           "settings": {
-            "highlighted_text": "Organic Whey Protein",
-            "normal_text": "for muscle growth and recovery"
+            "block_title": "High Protein",
+            "normal_text": "16g of complete dairy protein naturally rich in essential amino acids for all-day energy and muscle recovery"
           }
         },
         "text_line_2": {
           "type": "text_line",
           "settings": {
-            "highlighted_text": "LOW SUGAR",
-            "normal_text": "so you don't crash"
+            "block_title": "Gut Friendly Fiber",
+            "normal_text": "6g of fiber that keeps you full and moving "
           }
         },
         "text_line_3": {
           "type": "text_line",
           "settings": {
-            "highlighted_text": "High in fiber",
-            "normal_text": "to keep you full"
+            "block_title": "Low Sugar",
+            "normal_text": "Keeps your blood sugar steady so you don’t crash mid-morning"
           }
         }
       },
@@ -99,8 +99,8 @@
         "text_line_3"
       ],
       "settings": {
-        "snake_image": "shopify:\/\/shop_images\/snake1.png",
-        "header_title": "BITE OFF SOMETHING YOU CAN CHEW",
+        "snake_image": "shopify:\/\/shop_images\/snake-to-dawn.png",
+        "header_title": "We didn’t compromise on taste or ingredients",
         "color_scheme": "scheme-38af5a64-8703-4a1d-8643-c8b28dea0e88",
         "button_text": "Browse Oatmeal",
         "button_link": "shopify:\/\/collections\/oatmeal-collection"
@@ -191,13 +191,14 @@
         "badge_C6aTQd"
       ],
       "settings": {
-        "header_left": "WHAT WE'RE  MADE OF",
-        "header_right": "(besides taste)",
+        "header_left": "Breakfast that’s actually Balanced",
+        "header_right": "",
         "color_scheme": "scheme-38af5a64-8703-4a1d-8643-c8b28dea0e88"
       }
     },
     "home-breakfast-chart": {
       "type": "home-breakfast-chart",
+      "disabled": true,
       "settings": {
         "heading": "The Best Breakfast for the Job",
         "image": "shopify:\/\/shop_images\/Chart-2.png",
@@ -211,7 +212,7 @@
           "type": "review",
           "settings": {
             "stars_image": "shopify:\/\/shop_images\/4stars.png",
-            "review_text": "Misery & Mayhem oatmeal is my go-to! It fuels my morning workouts and keeps me full until lunch.",
+            "review_text": "Dawnbreaker oatmeal is my go-to! It fuels my morning workouts and keeps me full until lunch.",
             "reviewer_name": "Sarah Johnson",
             "reviewer_location": "New York, NY"
           }
@@ -241,18 +242,18 @@
         "review_block_3"
       ],
       "settings": {
-        "title": "Don't just take it from us",
+        "title": "What our friends are saying",
         "color_scheme": "default"
       }
     },
     "bundle-and-save": {
       "type": "bundle-and-save",
       "settings": {
-        "title": "Try all three",
-        "description": "Don't know which flavor to start with or just love them all? Order our limited-time bundle of delicious, protein-packed oats.",
+        "title": "Bundle and Save",
+        "description": "Don’t know which flavor to start with or just love them all? Order our limited time bundle of delicious gluten free, high protein oatmeal",
         "second_description": "<strong>6 Apple Cinnamon<br>\n6 Classic<br>\n6 Maple<\/strong>",
         "bundle_product": "oatmeal-bundle",
-        "bundle_image": "shopify:\/\/shop_images\/group-reduced.png",
+        "bundle_image": "shopify:\/\/shop_images\/home-dawn-bundle-desktop.png",
         "button_text": "Add to Cart",
         "color_scheme": "scheme-38af5a64-8703-4a1d-8643-c8b28dea0e88"
       }
@@ -291,55 +292,6 @@
         "color_scheme": "scheme-38af5a64-8703-4a1d-8643-c8b28dea0e88"
       }
     },
-    "home-email": {
-      "type": "home-email",
-      "settings": {
-        "header_title": "Join the Mayhem",
-        "sub_text": "Join our newsletter to stay updated.",
-        "button_text": "Join Now"
-      }
-    },
-    "image_banner": {
-      "type": "image-banner",
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "Browse our Oats",
-            "heading_size": "h0"
-          }
-        },
-        "button": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Shop all",
-            "button_link_1": "shopify:\/\/collections\/all",
-            "button_style_secondary_1": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "heading",
-        "button"
-      ],
-      "disabled": true,
-      "settings": {
-        "image": "shopify:\/\/shop_images\/Screenshot_2024-05-07_at_12.24.50_PM.png",
-        "image_overlay_opacity": 40,
-        "image_height": "large",
-        "desktop_content_position": "bottom-right",
-        "show_text_box": true,
-        "desktop_content_alignment": "center",
-        "color_scheme": "scheme-2",
-        "image_behavior": "none",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": false,
-        "show_text_below": true
-      }
-    },
     "home-social": {
       "type": "home-social",
       "custom_css": [
@@ -360,214 +312,12 @@
         "color_scheme": "scheme-38af5a64-8703-4a1d-8643-c8b28dea0e88"
       }
     },
-    "featured_product_ED8MHG": {
-      "type": "featured-product",
-      "blocks": {
-        "text_gVHM3H": {
-          "type": "text",
-          "settings": {
-            "text": "{{ section.settings.product.vendor }}",
-            "text_style": "uppercase"
-          }
-        },
-        "title_UcP6Uk": {
-          "type": "title",
-          "settings": {
-            "heading_size": "h1"
-          }
-        },
-        "price_eahfAJ": {
-          "type": "price",
-          "settings": {}
-        },
-        "variant_picker_VdMxER": {
-          "type": "variant_picker",
-          "settings": {
-            "picker_type": "button",
-            "swatch_shape": "circle"
-          }
-        },
-        "quantity_selector_hjFJWa": {
-          "type": "quantity_selector",
-          "settings": {}
-        },
-        "buy_buttons_YHymBb": {
-          "type": "buy_buttons",
-          "settings": {
-            "show_dynamic_checkout": true,
-            "show_gift_card_recipient": true
-          }
-        },
-        "share_c8AUQk": {
-          "type": "share",
-          "settings": {
-            "share_label": "Share"
-          }
-        }
-      },
-      "block_order": [
-        "text_gVHM3H",
-        "title_UcP6Uk",
-        "price_eahfAJ",
-        "variant_picker_VdMxER",
-        "quantity_selector_hjFJWa",
-        "buy_buttons_YHymBb",
-        "share_c8AUQk"
-      ],
-      "disabled": true,
+    "home-email": {
+      "type": "home-email",
       "settings": {
-        "product": "apple-cinnamon-protein-oatmeal",
-        "color_scheme": "scheme-38af5a64-8703-4a1d-8643-c8b28dea0e88",
-        "secondary_background": false,
-        "media_size": "medium",
-        "constrain_to_viewport": true,
-        "media_fit": "contain",
-        "media_position": "left",
-        "image_zoom": "lightbox",
-        "hide_variants": false,
-        "enable_video_looping": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "featured_product_E4ea63": {
-      "type": "featured-product",
-      "blocks": {
-        "text_TAMXTN": {
-          "type": "text",
-          "settings": {
-            "text": "{{ section.settings.product.vendor }}",
-            "text_style": "uppercase"
-          }
-        },
-        "title_UexgNi": {
-          "type": "title",
-          "settings": {
-            "heading_size": "h1"
-          }
-        },
-        "price_X7Gfb3": {
-          "type": "price",
-          "settings": {}
-        },
-        "variant_picker_rF7qNj": {
-          "type": "variant_picker",
-          "settings": {
-            "picker_type": "button",
-            "swatch_shape": "circle"
-          }
-        },
-        "quantity_selector_tFHWYD": {
-          "type": "quantity_selector",
-          "settings": {}
-        },
-        "buy_buttons_77g3Aw": {
-          "type": "buy_buttons",
-          "settings": {
-            "show_dynamic_checkout": true,
-            "show_gift_card_recipient": true
-          }
-        },
-        "share_ALXdTd": {
-          "type": "share",
-          "settings": {
-            "share_label": "Share"
-          }
-        }
-      },
-      "block_order": [
-        "text_TAMXTN",
-        "title_UexgNi",
-        "price_X7Gfb3",
-        "variant_picker_rF7qNj",
-        "quantity_selector_tFHWYD",
-        "buy_buttons_77g3Aw",
-        "share_ALXdTd"
-      ],
-      "disabled": true,
-      "settings": {
-        "product": "classic-protein-oatmeal",
-        "color_scheme": "scheme-3",
-        "secondary_background": false,
-        "media_size": "medium",
-        "constrain_to_viewport": true,
-        "media_fit": "contain",
-        "media_position": "right",
-        "image_zoom": "lightbox",
-        "hide_variants": false,
-        "enable_video_looping": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "featured_product_bmyDCB": {
-      "type": "featured-product",
-      "blocks": {
-        "text_bREc3X": {
-          "type": "text",
-          "settings": {
-            "text": "{{ section.settings.product.vendor }}",
-            "text_style": "uppercase"
-          }
-        },
-        "title_VBz38n": {
-          "type": "title",
-          "settings": {
-            "heading_size": "h1"
-          }
-        },
-        "price_XTJpwR": {
-          "type": "price",
-          "settings": {}
-        },
-        "variant_picker_AmXaiD": {
-          "type": "variant_picker",
-          "settings": {
-            "picker_type": "button",
-            "swatch_shape": "circle"
-          }
-        },
-        "quantity_selector_F9Appi": {
-          "type": "quantity_selector",
-          "settings": {}
-        },
-        "buy_buttons_h8JA4D": {
-          "type": "buy_buttons",
-          "settings": {
-            "show_dynamic_checkout": true,
-            "show_gift_card_recipient": true
-          }
-        },
-        "share_LqDHYh": {
-          "type": "share",
-          "settings": {
-            "share_label": "Share"
-          }
-        }
-      },
-      "block_order": [
-        "text_bREc3X",
-        "title_VBz38n",
-        "price_XTJpwR",
-        "variant_picker_AmXaiD",
-        "quantity_selector_F9Appi",
-        "buy_buttons_h8JA4D",
-        "share_LqDHYh"
-      ],
-      "disabled": true,
-      "settings": {
-        "product": "maple-protein-oatmeal",
-        "color_scheme": "scheme-38af5a64-8703-4a1d-8643-c8b28dea0e88",
-        "secondary_background": false,
-        "media_size": "medium",
-        "constrain_to_viewport": true,
-        "media_fit": "contain",
-        "media_position": "left",
-        "image_zoom": "lightbox",
-        "hide_variants": false,
-        "enable_video_looping": false,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "header_title": "Don't be a stranger",
+        "sub_text": "Fuel your inbox with recipes, releases, rewards, and more every month.",
+        "button_text": "Join Now"
       }
     }
   },
@@ -581,11 +331,7 @@
     "home-reviews",
     "bundle-and-save",
     "home-feature-merch",
-    "home-email",
-    "image_banner",
     "home-social",
-    "featured_product_ED8MHG",
-    "featured_product_E4ea63",
-    "featured_product_bmyDCB"
+    "home-email"
   ]
 }

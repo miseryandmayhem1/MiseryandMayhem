@@ -10,12 +10,12 @@
     <!-- Text Section (Right on Desktop, Below on Mobile) -->
     <div class="text-content">
       <h2 class="mob-lrg">{{ section.settings.header_title }}</h2>
-      <div>
+      <div class="snake-text-blocks">
       {% for block in section.blocks %}
-        <p>
-          <span class="text-highlight">{{ block.settings.highlighted_text }}</span>
-          {{ block.settings.normal_text }}
-        </p>
+        {% if block.settings.block_title != blank %}
+          <h3 class="snake-block-title">{{ block.settings.block_title }}</h3>
+        {% endif %}
+        <p>{{ block.settings.normal_text }}</p>
       {% endfor %}
       </div>
       <div class="home-snake-button-container">
@@ -67,15 +67,15 @@
       "settings": [
         {
           "type": "text",
-          "id": "highlighted_text",
-          "label": "Highlighted Text",
-          "default": "Highlighted Words"
+          "id": "block_title",
+          "label": "Block Title",
+          "default": "Block Title"
         },
         {
           "type": "text",
           "id": "normal_text",
-          "label": "Normal Text",
-          "default": "Normal text for this line."
+          "label": "Text",
+          "default": "Your text content here."
         }
       ]
     }
@@ -88,22 +88,22 @@
         {
           "type": "text_line",
           "settings": {
-            "highlighted_text": "Explore",
-            "normal_text": "the amazing world of snakes."
+            "block_title": "Discover",
+            "normal_text": "Explore the amazing world of snakes and their natural habitats."
           }
         },
         {
           "type": "text_line",
           "settings": {
-            "highlighted_text": "Learn",
-            "normal_text": "about different species."
+            "block_title": "Education",
+            "normal_text": "Learn about different species and their unique characteristics."
           }
         },
         {
           "type": "text_line",
           "settings": {
-            "highlighted_text": "Protect",
-            "normal_text": "these creatures and their habitats."
+            "block_title": "Conservation",
+            "normal_text": "Protect these creatures and support conservation efforts."
           }
         }
       ]

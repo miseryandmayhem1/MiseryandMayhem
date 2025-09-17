@@ -1,3 +1,26 @@
+/* new dawnbreaker global fonts */
+@import url("https://use.typekit.net/jsd8bzk.css");
+
+:root {
+  --font-body-family: "futura-pt", sans-serif; /* System text */
+  --font-heading-family: "new-spirit", serif; /* Titles */
+}
+
+body {
+  font-family: var(--font-body-family);
+  font-weight: 500; /* Medium weight for body text */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading-family);
+  font-weight: 500;
+}
+
 :root {
   --alpha-button-background: 1;
   --alpha-button-border: 1;
