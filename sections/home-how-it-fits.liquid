@@ -1,0 +1,95 @@
+<section class="how-it-fits-section color-{{ section.settings.color_scheme }}">
+  <div class="main-contain">
+    <!-- Centered Title -->
+    <h2 class="how-it-fits-title">{{ section.settings.header_title }}</h2>
+
+    <!-- Grid Container -->
+    <div class="how-it-fits-grid">
+      {% for block in section.blocks %}
+        <div class="how-it-fits-item">
+          <div class="how-it-fits-image">
+            <img src="{{ block.settings.item_image | image_url }}" alt="{{ block.settings.item_title }}" width="200" height="200">
+          </div>
+          <h3 class="how-it-fits-subtitle">{{ block.settings.item_title }}</h3>
+          <p class="how-it-fits-description">{{ block.settings.item_description }}</p>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+
+
+{% schema %}
+{
+  "name": "How It Fits Section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "header_title",
+      "label": "Section Title",
+      "default": "How Dawnbreaker fits into your morning"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color Scheme",
+      "default": "background-1"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "Grid Item",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "item_image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "item_title",
+          "label": "Title",
+          "default": "Item Title"
+        },
+        {
+          "type": "textarea",
+          "id": "item_description",
+          "label": "Description",
+          "default": "Item description goes here."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "How It Fits Section",
+      "category": "Custom",
+      "blocks": [
+        {
+          "type": "item",
+          "settings": {
+            "item_title": "Before Your Workout",
+            "item_description": "Our balanced combination of carbs and protein will not only fuel you through your training but also help your body recover"
+          }
+        },
+        {
+          "type": "item",
+          "settings": {
+            "item_title": "The Big Rush",
+            "item_description": "Whether it's getting your kids off to school or trying to beat traffic, our complete breakfast is ready in 3 minutes or less"
+          }
+        },
+        {
+          "type": "item",
+          "settings": {
+            "item_title": "Take Us Anywhere",
+            "item_description": "When you can't find your ideal breakfast at the office or the airport, bring us with you instead"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

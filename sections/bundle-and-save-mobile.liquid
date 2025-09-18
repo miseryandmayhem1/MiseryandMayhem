@@ -55,7 +55,7 @@
 
           <!-- Prices next to button -->
           <div class="price-wrapper">
-            <span class="sale-price text-highlight">{{ all_6pk_variant.price | money }}</span>
+            <span class="sale-price">{{ all_6pk_variant.price | money }}</span>
             {% if all_6pk_variant.compare_at_price > all_6pk_variant.price %}
               <span class="original-price"><s>{{ all_6pk_variant.compare_at_price | money }}</s></span>
             {% endif %}

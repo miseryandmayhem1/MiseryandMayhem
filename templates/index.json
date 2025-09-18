@@ -8,23 +8,23 @@
         "mobile_video": "",
         "autoplay": true,
         "loop": true,
-        "desktop_image": "shopify:\/\/shop_images\/Home-DesktopHero-withoutBlack.jpg",
-        "mobile_image": "shopify:\/\/shop_images\/Home-MobileHero-withoutBlack.jpg",
+        "desktop_image": "shopify:\/\/shop_images\/home-hero-desktop.jpg",
+        "mobile_image": "shopify:\/\/shop_images\/home-hero-mobile.jpg",
         "header_text": "Meet the new champion of breakfast",
         "header_subtext": "",
         "subheader_text": "The best protein oatmeal with nothing to hide.",
         "button_link": "shopify:\/\/collections\/oatmeal-collection",
-        "button_text": "Buy Oats"
+        "button_text": ""
       }
     },
     "bundle-and-save-mobile": {
       "type": "bundle-and-save-mobile",
       "settings": {
-        "title": "Try all three",
-        "description": "Don't know which flavor to start with or just love them all? Order our limited-time bundle of delicious, protein-packed oats.",
+        "title": "Bundle and Save",
+        "description": "Don't know which flavor to start with or just love them all? Order our limited time bundle of delicious gluten free, high protein oatmeal",
         "second_description": "<strong>6 Apple Cinnamon<br>\n6 Classic<br>\n6 Maple<\/strong>",
         "bundle_product": "oatmeal-bundle",
-        "bundle_image": "shopify:\/\/shop_images\/bundle-new.png",
+        "bundle_image": "shopify:\/\/shop_images\/home-dawn-bundle-desktop.png",
         "button_text": "Add to Cart",
         "color_scheme": "scheme-38af5a64-8703-4a1d-8643-c8b28dea0e88"
       }
@@ -82,14 +82,14 @@
           "type": "text_line",
           "settings": {
             "block_title": "Gut Friendly Fiber",
-            "normal_text": "6g of fiber that keeps you full and moving "
+            "normal_text": "6g of fiber that keeps you full and moving"
           }
         },
         "text_line_3": {
           "type": "text_line",
           "settings": {
             "block_title": "Low Sugar",
-            "normal_text": "Keeps your blood sugar steady so you don’t crash mid-morning"
+            "normal_text": "Keeps your blood sugar steady so you don't crash mid-morning"
           }
         }
       },
@@ -100,7 +100,7 @@
       ],
       "settings": {
         "snake_image": "shopify:\/\/shop_images\/snake-to-dawn.png",
-        "header_title": "We didn’t compromise on taste or ingredients",
+        "header_title": "We didn't compromise on taste or ingredients",
         "color_scheme": "scheme-38af5a64-8703-4a1d-8643-c8b28dea0e88",
         "button_text": "Browse Oatmeal",
         "button_link": "shopify:\/\/collections\/oatmeal-collection"
@@ -191,9 +191,47 @@
         "badge_C6aTQd"
       ],
       "settings": {
-        "header_left": "Breakfast that’s actually Balanced",
+        "header_left": "Breakfast that's actually Balanced",
         "header_right": "",
         "color_scheme": "scheme-38af5a64-8703-4a1d-8643-c8b28dea0e88"
+      }
+    },
+    "home-how-it-fits": {
+      "type": "home-how-it-fits",
+      "blocks": {
+        "how_it_fits_1": {
+          "type": "item",
+          "settings": {
+            "item_image": "shopify:\/\/shop_images\/how1.png",
+            "item_title": "Before Your Workout",
+            "item_description": "Our balanced combination of carbs and protein will not only fuel you through your training but also help your body recover"
+          }
+        },
+        "how_it_fits_2": {
+          "type": "item",
+          "settings": {
+            "item_image": "shopify:\/\/shop_images\/how2.png",
+            "item_title": "The Big Rush",
+            "item_description": "Whether it's getting your kids off to school or trying to beat traffic, our complete breakfast is ready in 3 minutes or less"
+          }
+        },
+        "how_it_fits_3": {
+          "type": "item",
+          "settings": {
+            "item_image": "shopify:\/\/shop_images\/how3.png",
+            "item_title": "Take Us Anywhere",
+            "item_description": "When you can't find your ideal breakfast at the office or the airport, bring us with you instead"
+          }
+        }
+      },
+      "block_order": [
+        "how_it_fits_1",
+        "how_it_fits_2",
+        "how_it_fits_3"
+      ],
+      "settings": {
+        "header_title": "How Dawnbreaker fits into your morning",
+        "color_scheme": "background-1"
       }
     },
     "home-breakfast-chart": {
@@ -250,7 +288,7 @@
       "type": "bundle-and-save",
       "settings": {
         "title": "Bundle and Save",
-        "description": "Don’t know which flavor to start with or just love them all? Order our limited time bundle of delicious gluten free, high protein oatmeal",
+        "description": "Don't know which flavor to start with or just love them all? Order our limited time bundle of delicious gluten free, high protein oatmeal",
         "second_description": "<strong>6 Apple Cinnamon<br>\n6 Classic<br>\n6 Maple<\/strong>",
         "bundle_product": "oatmeal-bundle",
         "bundle_image": "shopify:\/\/shop_images\/home-dawn-bundle-desktop.png",
@@ -327,6 +365,7 @@
     "home-featured-products",
     "home-snake-section",
     "home-madeof",
+    "home-how-it-fits",
     "home-breakfast-chart",
     "home-reviews",
     "bundle-and-save",
