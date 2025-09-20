@@ -459,7 +459,9 @@ h2 {
     /* grid-template-columns: auto 150px 80px; */
     /* grid-template-columns: auto 60px 80px; */
     /* grid-template-columns: auto 230px 80px; */
-    grid-template-columns: auto 252px 80px;
+
+    /* grid-template-columns: auto 252px 80px; */
+    grid-template-columns: auto 170px 80px;
   }
 }
 
@@ -655,12 +657,13 @@ h2 {
 
 .hero-subcontent p {
   max-width: 360px;
-  font-size: 22px;
+  font-size: 26px;
   font-weight: 400;
 }
 
 .hero-button {
   margin-top: 10px;
+  display: none;
 }
 
 /* Mobile Layout */
@@ -705,6 +708,10 @@ h2 {
 
   .hero-subcontent p {
     max-width: 70%;
+  }
+
+  .hero-button {
+    display: inline-block;
   }
 }
 
@@ -895,6 +902,7 @@ h2 {
   .snake-text-section {
     padding-top: 20px;
     padding-bottom: 40px;
+    padding-top: 80px; /*added padding because of mobile re-order*/
   }
 
   .snake-text-section .container {
@@ -1888,5 +1896,91 @@ body .customer.account.section-template--16544309117063__main-padding h2 {
 
   .how-it-fits-description {
     font-size: 18px;
+  }
+}
+
+/* home page re-orders */
+
+/* Homepage section reordering */
+.index #MainContent {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Default desktop order - use the specific IDs like you did in mobile */
+.index #shopify-section-template--17501431267463__hero_video {
+  order: 1;
+}
+.index #shopify-section-template--17501431267463__bundle-and-save-mobile {
+  order: 2;
+}
+.index #shopify-section-template--17501431267463__home-featured-products {
+  order: 3;
+}
+.index #shopify-section-template--17501431267463__home-snake-section {
+  order: 4;
+}
+.index #shopify-section-template--17501431267463__home-madeof {
+  order: 5;
+}
+.index #shopify-section-template--17501431267463__home-how-it-fits {
+  order: 6;
+}
+.index #shopify-section-template--17501431267463__home-breakfast-chart {
+  order: 7;
+}
+.index #shopify-section-template--17501431267463__home-reviews {
+  order: 8;
+}
+.index #shopify-section-template--17501431267463__bundle-and-save {
+  order: 9;
+}
+.index #shopify-section-template--17501431267463__home-feature-merch {
+  order: 10;
+}
+.index #shopify-section-template--17501431267463__home-social {
+  order: 11;
+}
+.index #shopify-section-template--17501431267463__home-email {
+  order: 12;
+}
+
+/* Mobile reordering */
+@media (max-width: 768px) {
+  .index #shopify-section-template--17501431267463__hero_video {
+    order: 1;
+  }
+  .index #shopify-section-template--17501431267463__bundle-and-save-mobile {
+    order: 6;
+  }
+  .index #shopify-section-template--17501431267463__home-featured-products {
+    order: 5;
+  }
+  .index #shopify-section-template--17501431267463__home-snake-section {
+    order: 2;
+  }
+  .index #shopify-section-template--17501431267463__home-madeof {
+    order: 3;
+  }
+  .index #shopify-section-template--17501431267463__home-how-it-fits {
+    order: 4;
+  }
+  .index #shopify-section-template--17501431267463__home-breakfast-chart {
+    order: 11;
+  }
+  .index #shopify-section-template--17501431267463__home-reviews {
+    order: 7;
+  }
+  .index #shopify-section-template--17501431267463__bundle-and-save {
+    order: 12;
+  }
+  .index #shopify-section-template--17501431267463__home-feature-merch {
+    order: 10;
+  }
+  .index #shopify-section-template--17501431267463__home-social {
+    order: 8;
+  }
+  .index #shopify-section-template--17501431267463__home-email {
+    order: 9;
   }
 }

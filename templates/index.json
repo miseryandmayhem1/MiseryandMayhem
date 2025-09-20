@@ -14,7 +14,7 @@
         "header_subtext": "",
         "subheader_text": "The best protein oatmeal with nothing to hide.",
         "button_link": "shopify:\/\/collections\/oatmeal-collection",
-        "button_text": ""
+        "button_text": "Buy Oats"
       }
     },
     "bundle-and-save-mobile": {
@@ -112,42 +112,42 @@
         "block-1": {
           "type": "number_with_text",
           "settings": {
-            "number": "290",
+            "number": "220-230",
             "description": "Calories"
           }
         },
         "block-2": {
           "type": "number_with_text",
           "settings": {
-            "number": "20 G",
+            "number": "16g",
             "description": "Protein"
           }
         },
         "block-3": {
           "type": "number_with_text",
           "settings": {
-            "number": "42 G",
+            "number": "33-35",
             "description": "Carbohydrates"
           }
         },
         "block-4": {
           "type": "number_with_text",
           "settings": {
-            "number": "6 G",
+            "number": "6g",
             "description": "Fiber"
           }
         },
         "block-5": {
           "type": "number_with_text",
           "settings": {
-            "number": "2-8 G",
+            "number": "1-6g",
             "description": "Sugar"
           }
         },
         "block-6": {
           "type": "number_with_text",
           "settings": {
-            "number": "5-6 G",
+            "number": "3.5g",
             "description": "Fat"
           }
         },
@@ -339,13 +339,13 @@
       "settings": {
         "heading": "Tag us on social",
         "instagram_icon": "shopify:\/\/shop_images\/Instagram.svg",
-        "instagram_link": "https:\/\/www.instagram.com\/getmiseryandmayhem\/",
+        "instagram_link": "https:\/\/www.instagram.com\/dawnbreakeroats\/",
         "tiktok_icon": "shopify:\/\/shop_images\/TikTok_4826ab80-e2d2-44d6-afbb-c05fd7e2bac3.svg",
-        "tiktok_link": "https:\/\/www.tiktok.com\/@miseryandmayhem?lang=en",
+        "tiktok_link": "https:\/\/www.tiktok.com\/@miseryandmayhem",
         "x_icon": "shopify:\/\/shop_images\/x-logo.png",
-        "x_link": "https:\/\/x.com\/miseryandmayhem",
+        "x_link": "https:\/\/x.com\/dawnbreakeroats",
         "linkedin_icon": "shopify:\/\/shop_images\/linkedin.png",
-        "linkedin_link": "https:\/\/www.linkedin.com\/company\/misery-and-mayhem\/",
+        "linkedin_link": "https:\/\/www.linkedin.com\/company\/dawnbreakeroats\/",
         "facebook_link": "https:\/\/www.instagram.com\/getmiseryandmayhem\/",
         "color_scheme": "scheme-38af5a64-8703-4a1d-8643-c8b28dea0e88"
       }
