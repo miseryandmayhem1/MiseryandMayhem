@@ -460,8 +460,8 @@ h2 {
     /* grid-template-columns: auto 60px 80px; */
     /* grid-template-columns: auto 230px 80px; */
 
-    /* grid-template-columns: auto 252px 80px; */
-    grid-template-columns: auto 170px 80px;
+    grid-template-columns: auto 262px 80px;
+    /* grid-template-columns: auto 170px 80px; */
   }
 }
 
@@ -1984,3 +1984,9 @@ body .customer.account.section-template--16544309117063__main-padding h2 {
     order: 9;
   }
 }
+
+/* collection images */
+/* .template-collection .card__media img {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+} */

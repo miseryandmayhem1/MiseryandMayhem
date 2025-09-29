@@ -67,3 +67,20 @@ document.addEventListener("DOMContentLoaded", function () {
     observer.observe(image);
   });
 });
+
+// default 10pk for prod
+document.addEventListener("DOMContentLoaded", function () {
+  // Find the 10pk option and select it by default
+  const tenPkOption = document.querySelector(
+    'input[value="10 pk"], option[value="10 pk"]'
+  );
+  if (tenPkOption) {
+    if (tenPkOption.type === "radio") {
+      tenPkOption.checked = true;
+    } else if (tenPkOption.tagName === "OPTION") {
+      tenPkOption.selected = true;
+    }
+    // Trigger change event to update price
+    tenPkOption.dispatchEvent(new Event("change", { bubbles: true }));
+  }
+});

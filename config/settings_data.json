@@ -144,9 +144,9 @@
           "link_3": "",
           "link_3_url": "",
           "link_4": "Support",
-          "link_4_url": "mailto:support@miseryandmayhem.com",
+          "link_4_url": "mailto:support@dawnbreakeroats.com",
           "link_5": "Contact Us",
-          "link_5_url": "mailto:support@miseryandmayhem.com",
+          "link_5_url": "mailto:support@dawnbreakeroats.com",
           "link_6": "",
           "link_6_url": "shopify:\/\/pages\/splash",
           "link_7": "Privacy Policy",
@@ -186,6 +186,11 @@
           "inject_modules_loader": true,
           "inject_sdk_loader": false
         }
+      },
+      "855628211100114053": {
+        "type": "shopify:\/\/apps\/klaviyo-email-marketing-sms\/blocks\/klaviyo-onsite-embed\/2632fe16-c075-4321-a88b-50b567f42507",
+        "disabled": false,
+        "settings": {}
       }
     },
     "color_schemes": {

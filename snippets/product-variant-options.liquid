@@ -26,10 +26,12 @@
  {% assign value_downcase = value | downcase | strip %}
  {% assign show_variant = true %}
  {% unless product.title contains 'Bundle' %}
-   {% if value_downcase contains '6' and value_downcase contains 'pk' %}
+   {% if value_downcase == '5 pk' %}
      {% assign show_variant = false %}
    {% endif %}
  {% endunless %}
+
+ {% comment %} corresponding JS in custom.js to default to 10pk {% endcomment %}
 
  {% if show_variant %}
  {%- liquid
