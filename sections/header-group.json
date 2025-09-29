@@ -8,8 +8,8 @@
         "announcement-bar-0": {
           "type": "announcement",
           "settings": {
-            "text": "Subscribe and save 10% on your first order!",
-            "link": "shopify:\/\/collections\/all"
+            "text": "FREE SHIPPING on orders over $60",
+            "link": "shopify:\/\/collections\/oatmeal-collection"
           }
         }
       },
