@@ -5,15 +5,10 @@
    <div class="collection-hero__bg">
      <!-- Desktop Background -->
      {% if template == 'collection' and collection.handle == 'all' %}
-       <video
+       <div
          class="desktop-media"
-         autoplay
-         loop
-         muted
-         playsinline
-       >
-         <source src="https://cdn.shopify.com/videos/c/o/v/5f3c1490215c4114aed10d055730c15c.mp4" type="video/mp4">
-       </video>
+         style="background-image: url('https://cdn.shopify.com/s/files/1/0598/7201/8567/files/06.DB2.0_16x9AppleCinnamon.jpg?v=1758380210');">
+       </div>
      {% else %}
        {% if collection.metafields.custom.background_video_desktop_ != blank %}
          <video
@@ -35,15 +30,10 @@
 
      <!-- Mobile Background -->
      {% if template == 'collection' and collection.handle == 'all' %}
-       <video
+       <div
          class="mobile-media"
-         autoplay
-         loop
-         muted
-         playsinline
-       >
-         <source src="https://cdn.shopify.com/videos/c/o/v/4b58eb22f2964cf088ef50b07706fa9b.mp4" type="video/mp4">
-       </video>
+         style="background-image: url('https://cdn.shopify.com/s/files/1/0598/7201/8567/files/PLP-MobileHero-withoutBlack.jpg?v=1758045245');">
+       </div>
      {% else %}
        {% if collection.metafields.custom.mobile_background_video != blank %}
          <video
