@@ -513,7 +513,8 @@ h2 {
     /* grid-template-columns: auto 60px 80px; */
     /* grid-template-columns: auto 230px 80px; */
 
-    grid-template-columns: auto 262px 80px;
+    /* grid-template-columns: auto 262px 80px; */
+    grid-template-columns: auto 314px 80px;
     /* grid-template-columns: auto 170px 80px; */
   }
 }
