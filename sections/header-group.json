@@ -8,8 +8,8 @@
         "announcement-bar-0": {
           "type": "announcement",
           "settings": {
-            "text": "FREE SHIPPING on orders over $60",
-            "link": "shopify:\/\/collections\/oatmeal-collection"
+            "text": "Click here to try Dawnbreaker Oats for just $7 →",
+            "link": "\/products\/trial-2-pack"
           }
         }
       },
