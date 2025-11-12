@@ -330,11 +330,43 @@
         "color_scheme": "scheme-38af5a64-8703-4a1d-8643-c8b28dea0e88"
       }
     },
-    "home-social": {
-      "type": "home-social",
-      "custom_css": [
-        ".home-social {\/* Or whatever your section's class name is *\/ min-height: auto; height: auto; padding: 2rem 0; display: flex; align-items: center; justify-content: space-between;}",
-        " \/* If you need to target the container of the text and social icons specifically *\/.home-social-container {width: 100%; max-width: 1200px; \/* Adjust based on your design needs *\/ margin: 0 auto; display: flex; justify-content: space-between; align-items: center;}"
+    "home-social-carousel": {
+      "type": "home-social-carousel",
+      "blocks": {
+        "instagram_1": {
+          "type": "instagram_post",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/social1_c0952ab1-8a0f-4c37-a285-4bb6caebad44.jpg",
+            "instagram_handle": "@username"
+          }
+        },
+        "instagram_2": {
+          "type": "instagram_post",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/social4.jpg",
+            "instagram_handle": "@username"
+          }
+        },
+        "instagram_3": {
+          "type": "instagram_post",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/social3_dbde7ea8-98e0-43ca-b123-5f3241cd977c.jpg",
+            "instagram_handle": "@username"
+          }
+        },
+        "instagram_4": {
+          "type": "instagram_post",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/social2_5cf889c2-b62c-43c8-bb23-7b6c418defaf.jpg",
+            "instagram_handle": "@username"
+          }
+        }
+      },
+      "block_order": [
+        "instagram_1",
+        "instagram_2",
+        "instagram_3",
+        "instagram_4"
       ],
       "settings": {
         "heading": "Tag us on social",
@@ -346,7 +378,7 @@
         "x_link": "https:\/\/x.com\/dawnbreakeroats",
         "linkedin_icon": "shopify:\/\/shop_images\/linkedin.png",
         "linkedin_link": "https:\/\/www.linkedin.com\/company\/dawnbreakeroats\/",
-        "facebook_link": "https:\/\/www.instagram.com\/getmiseryandmayhem\/",
+        "facebook_link": "",
         "color_scheme": "scheme-38af5a64-8703-4a1d-8643-c8b28dea0e88"
       }
     },
@@ -370,7 +402,7 @@
     "home-reviews",
     "bundle-and-save",
     "home-feature-merch",
-    "home-social",
+    "home-social-carousel",
     "home-email"
   ]
 }

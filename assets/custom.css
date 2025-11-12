@@ -1445,7 +1445,7 @@ h2 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0px 40px;
+  padding: 20px 40px 120px;
 }
 
 .bundle-and-save-mobile-section {
@@ -1988,13 +1988,13 @@ body .customer.account.section-template--16544309117063__main-padding h2 {
 .index #shopify-section-template--17501431267463__home-reviews {
   order: 8;
 }
-.index #shopify-section-template--17501431267463__bundle-and-save {
+.index #shopify-section-template--17501431267463__home-social-carousel {
   order: 9;
 }
-.index #shopify-section-template--17501431267463__home-feature-merch {
+.index #shopify-section-template--17501431267463__bundle-and-save {
   order: 10;
 }
-.index #shopify-section-template--17501431267463__home-social {
+.index #shopify-section-template--17501431267463__home-feature-merch {
   order: 11;
 }
 .index #shopify-section-template--17501431267463__home-email {
@@ -2021,26 +2021,25 @@ body .customer.account.section-template--16544309117063__main-padding h2 {
   .index #shopify-section-template--17501431267463__home-how-it-fits {
     order: 4;
   }
-  .index #shopify-section-template--17501431267463__home-breakfast-chart {
-    order: 11;
-  }
   .index #shopify-section-template--17501431267463__home-reviews {
     order: 7;
   }
-  .index #shopify-section-template--17501431267463__bundle-and-save {
-    order: 12;
-  }
-  .index #shopify-section-template--17501431267463__home-feature-merch {
-    order: 10;
-  }
-  .index #shopify-section-template--17501431267463__home-social {
+  .index #shopify-section-template--17501431267463__home-social-carousel {
     order: 8;
   }
   .index #shopify-section-template--17501431267463__home-email {
     order: 9;
   }
+  .index #shopify-section-template--17501431267463__home-feature-merch {
+    order: 10;
+  }
+  .index #shopify-section-template--17501431267463__home-breakfast-chart {
+    order: 11;
+  }
+  .index #shopify-section-template--17501431267463__bundle-and-save {
+    order: 12;
+  }
 }
-
 /* collection images */
 /* .template-collection .card__media img {
   image-rendering: -webkit-optimize-contrast;

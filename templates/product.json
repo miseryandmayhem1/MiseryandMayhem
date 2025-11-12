@@ -99,6 +99,45 @@
         "color_scheme": ""
       }
     },
+    "home_how_it_fits_MKtrpD": {
+      "type": "home-how-it-fits",
+      "blocks": {
+        "item_QY78Uy": {
+          "type": "item",
+          "settings": {
+            "item_image": "shopify:\/\/shop_images\/how1.png",
+            "item_title": "Before Your Workout",
+            "item_description": "Our balanced combination of carbs and protein will not only fuel you through your training but also help your body recover"
+          }
+        },
+        "item_nK434c": {
+          "type": "item",
+          "settings": {
+            "item_image": "shopify:\/\/shop_images\/how2.png",
+            "item_title": "The Big Rush",
+            "item_description": "Whether it's getting your kids off to school or trying to beat traffic, our complete breakfast is ready in 3 minutes or less"
+          }
+        },
+        "item_wW7bND": {
+          "type": "item",
+          "settings": {
+            "item_image": "shopify:\/\/shop_images\/how3.png",
+            "item_title": "Take Us Anywhere",
+            "item_description": "When you can't find your ideal breakfast at the office or the airport, bring us with you instead"
+          }
+        }
+      },
+      "block_order": [
+        "item_QY78Uy",
+        "item_nK434c",
+        "item_wW7bND"
+      ],
+      "name": "How It Fits Section",
+      "settings": {
+        "header_title": "How Dawnbreaker fits into your morning",
+        "color_scheme": ""
+      }
+    },
     "home_email_cANeJm": {
       "type": "home-email",
       "settings": {
@@ -127,6 +166,7 @@
     "main",
     "related-products",
     "bundle_and_save_6Ce6EF",
+    "home_how_it_fits_MKtrpD",
     "home_email_cANeJm",
     "17358434865c296c80"
   ]
