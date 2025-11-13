@@ -1,7 +1,7 @@
 {
   "sections": {
     "main": {
-      "type": "main-product",
+      "type": "main-product-trial",
       "blocks": {
         "title": {
           "type": "title",
@@ -49,9 +49,6 @@
         "quantity_selector",
         "share"
       ],
-      "custom_css": [
-        "@media screen and (min-width: 768px) {.product__info-container {\/* padding: 3rem; border-radius: 5px; border: 2px solid green; *\/ }}"
-      ],
       "settings": {
         "enable_sticky_info": false,
         "color_scheme": "scheme-38af5a64-8703-4a1d-8643-c8b28dea0e88",
@@ -68,46 +65,88 @@
         "padding_bottom": 40
       }
     },
-    "1412692323f93b4fed8b": {
+    "yotpo_reviews": {
       "type": "apps",
       "blocks": {
-        "0d41ef15-1c12-446b-a3c9-a82289e7fcd0": {
+        "yotpo_reviews_block": {
           "type": "shopify:\/\/apps\/yotpo-product-reviews\/blocks\/reviews\/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
           "settings": {
-            "product": "trial-2-pack"
+            "product": "maple-protein-oatmeal"
           }
         }
       },
       "block_order": [
-        "0d41ef15-1c12-446b-a3c9-a82289e7fcd0"
+        "yotpo_reviews_block"
       ],
       "disabled": true,
       "settings": {
         "include_margins": true
       }
     },
-    "17630140943e0c7e3e": {
+    "yotpo_carousel": {
       "type": "apps",
       "blocks": {
-        "yotpo_product_reviews_reviews_carousel_F8h8W6": {
+        "yotpo_carousel_block": {
           "type": "shopify:\/\/apps\/yotpo-product-reviews\/blocks\/reviews_carousel\/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
           "settings": {
-            "product": "trial-2-pack"
+            "product": "apple-cinnamon-protein-oatmeal"
           }
         }
       },
       "block_order": [
-        "yotpo_product_reviews_reviews_carousel_F8h8W6"
+        "yotpo_carousel_block"
       ],
-      "disabled": true,
       "settings": {
         "include_margins": true
       }
     },
-    "home_how_it_fits_MKtrpD": {
+    "product_social_carousel_NhUEQG": {
+      "type": "product-social-carousel",
+      "blocks": {
+        "instagram_post_U8LnGq": {
+          "type": "instagram_post",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/social1_c0952ab1-8a0f-4c37-a285-4bb6caebad44.jpg",
+            "instagram_handle": "@username"
+          }
+        },
+        "instagram_post_833fhP": {
+          "type": "instagram_post",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/social4.jpg",
+            "instagram_handle": "@username"
+          }
+        },
+        "instagram_post_LERRmd": {
+          "type": "instagram_post",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/social3_dbde7ea8-98e0-43ca-b123-5f3241cd977c.jpg",
+            "instagram_handle": "@username"
+          }
+        },
+        "instagram_post_wF67Cd": {
+          "type": "instagram_post",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/social2_5cf889c2-b62c-43c8-bb23-7b6c418defaf.jpg",
+            "instagram_handle": "@username"
+          }
+        }
+      },
+      "block_order": [
+        "instagram_post_U8LnGq",
+        "instagram_post_833fhP",
+        "instagram_post_LERRmd",
+        "instagram_post_wF67Cd"
+      ],
+      "name": "Product Social Carousel",
+      "settings": {
+        "color_scheme": "default"
+      }
+    },
+    "home_how_it_fits": {
       "type": "home-how-it-fits",
       "blocks": {
-        "item_QY78Uy": {
+        "item_1": {
           "type": "item",
           "settings": {
             "item_image": "shopify:\/\/shop_images\/how1.png",
@@ -115,7 +154,7 @@
             "item_description": "Our balanced combination of carbs and protein will not only fuel you through your training but also help your body recover"
           }
         },
-        "item_nK434c": {
+        "item_2": {
           "type": "item",
           "settings": {
             "item_image": "shopify:\/\/shop_images\/how2.png",
@@ -123,7 +162,7 @@
             "item_description": "Whether it's getting your kids off to school or trying to beat traffic, our complete breakfast is ready in 3 minutes or less"
           }
         },
-        "item_wW7bND": {
+        "item_3": {
           "type": "item",
           "settings": {
             "item_image": "shopify:\/\/shop_images\/how3.png",
@@ -133,38 +172,19 @@
         }
       },
       "block_order": [
-        "item_QY78Uy",
-        "item_nK434c",
-        "item_wW7bND"
+        "item_1",
+        "item_2",
+        "item_3"
       ],
-      "name": "How It Fits Section",
       "settings": {
         "header_title": "How Dawnbreaker fits into your morning",
         "color_scheme": ""
       }
     },
-    "related-products": {
-      "type": "related-products",
-      "settings": {
-        "heading": "Try Another Flavor",
-        "heading_size": "h2",
-        "products_to_show": 6,
-        "columns_desktop": 4,
-        "color_scheme": "scheme-38af5a64-8703-4a1d-8643-c8b28dea0e88",
-        "image_ratio": "square",
-        "image_shape": "default",
-        "show_secondary_image": false,
-        "show_vendor": false,
-        "show_rating": false,
-        "columns_mobile": "2",
-        "padding_top": 36,
-        "padding_bottom": 28
-      }
-    },
-    "home_email_cANeJm": {
+    "home_email": {
       "type": "home-email",
       "settings": {
-        "header_title": "Don’t be a stranger",
+        "header_title": "Don't be a stranger",
         "sub_text": "Fuel your inbox with recipes, releases, rewards, and more every month.",
         "button_text": "Join Now"
       }
@@ -172,10 +192,10 @@
   },
   "order": [
     "main",
-    "related-products",
-    "1412692323f93b4fed8b",
-    "17630140943e0c7e3e",
-    "home_how_it_fits_MKtrpD",
-    "home_email_cANeJm"
+    "yotpo_reviews",
+    "yotpo_carousel",
+    "product_social_carousel_NhUEQG",
+    "home_how_it_fits",
+    "home_email"
   ]
 }

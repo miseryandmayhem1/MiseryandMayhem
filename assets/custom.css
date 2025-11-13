@@ -2045,3 +2045,7 @@ body .customer.account.section-template--16544309117063__main-padding h2 {
   image-rendering: -webkit-optimize-contrast;
   image-rendering: crisp-edges;
 } */
+
+.yotpo-reviews-carousel-widget-container {
+  width: 100% !important;
+}

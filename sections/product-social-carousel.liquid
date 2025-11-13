@@ -1,0 +1,351 @@
+<section class="home-social-carousel color-{{ section.settings.color_scheme }}">
+  <div class="main-contain">
+    <div class="socials-container">
+
+      <!-- Carousel Only - No Header -->
+      <div class="instagram-carousel-wrapper">
+        <button class="carousel-nav carousel-nav-prev" aria-label="Previous">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+        </button>
+
+        <div class="instagram-carousel" id="instagram-carousel-{{ section.id }}">
+          {% for block in section.blocks %}
+            <div class="instagram-item" {{ block.shopify_attributes }}>
+              {% if block.settings.image != blank %}
+                <img src="{{ block.settings.image | img_url: '600x' }}"
+                     alt="{{ block.settings.instagram_handle }}"
+                     loading="lazy"
+                     width="100%"
+                     height="auto">
+              {% else %}
+                {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+              {% endif %}
+            </div>
+          {% endfor %}
+        </div>
+
+        <button class="carousel-nav carousel-nav-next" aria-label="Next">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  (function() {
+    const carousel = document.getElementById('instagram-carousel-{{ section.id }}');
+    const prevBtn = carousel.parentElement.querySelector('.carousel-nav-prev');
+    const nextBtn = carousel.parentElement.querySelector('.carousel-nav-next');
+
+    const originalItems = Array.from(carousel.querySelectorAll('.instagram-item'));
+    const itemCount = originalItems.length;
+
+    // Clone all items for infinite loop
+    originalItems.forEach(item => {
+      const clone = item.cloneNode(true);
+      carousel.appendChild(clone);
+    });
+
+    originalItems.forEach(item => {
+      const clone = item.cloneNode(true);
+      carousel.insertBefore(clone, carousel.firstChild);
+    });
+
+    let currentIndex = itemCount; // Start at first real item
+    let isAnimating = false;
+
+    function getItemWidth() {
+      const item = carousel.querySelector('.instagram-item');
+      return item ? item.offsetWidth : 0;
+    }
+
+    function updateCarousel(animate = true) {
+      const itemWidth = getItemWidth();
+      const gap = 20;
+      const scrollPosition = currentIndex * (itemWidth + gap);
+
+      if (animate) {
+        carousel.style.scrollBehavior = 'smooth';
+      } else {
+        carousel.style.scrollBehavior = 'auto';
+      }
+
+      carousel.scrollLeft = scrollPosition;
+    }
+
+    function handleInfiniteLoop() {
+      // If we're at or past the last cloned set
+      if (currentIndex >= itemCount * 2) {
+        currentIndex = itemCount;
+        setTimeout(() => {
+          updateCarousel(false);
+        }, 50);
+      }
+      // If we're at or before the first cloned set
+      else if (currentIndex < itemCount) {
+        currentIndex = itemCount * 2 - 1;
+        setTimeout(() => {
+          updateCarousel(false);
+        }, 50);
+      }
+    }
+
+    function scrollNext() {
+      if (isAnimating) return;
+      isAnimating = true;
+
+      currentIndex++;
+      updateCarousel(true);
+
+      setTimeout(() => {
+        handleInfiniteLoop();
+        isAnimating = false;
+      }, 400);
+    }
+
+    function scrollPrev() {
+      if (isAnimating) return;
+      isAnimating = true;
+
+      currentIndex--;
+      updateCarousel(true);
+
+      setTimeout(() => {
+        handleInfiniteLoop();
+        isAnimating = false;
+      }, 400);
+    }
+
+    prevBtn.addEventListener('click', scrollPrev);
+    nextBtn.addEventListener('click', scrollNext);
+
+    // Initialize position after images load
+    function initialize() {
+      // Wait for images to load to get correct width
+      const images = carousel.querySelectorAll('img');
+      let loadedCount = 0;
+
+      function onImageLoad() {
+        loadedCount++;
+        if (loadedCount === images.length) {
+          updateCarousel(false);
+        }
+      }
+
+      images.forEach(img => {
+        if (img.complete) {
+          onImageLoad();
+        } else {
+          img.addEventListener('load', onImageLoad);
+        }
+      });
+
+      // Fallback if images are cached or fail to load
+      setTimeout(() => {
+        updateCarousel(false);
+      }, 100);
+    }
+
+    initialize();
+
+    // Handle window resize
+    let resizeTimeout;
+    window.addEventListener('resize', () => {
+      clearTimeout(resizeTimeout);
+      resizeTimeout = setTimeout(() => {
+        updateCarousel(false);
+      }, 100);
+    });
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Product Social Carousel",
+  "settings": [
+    {
+      "type": "select",
+      "id": "color_scheme",
+      "label": "Color Scheme",
+      "options": [
+        { "value": "default", "label": "Default" },
+        { "value": "scheme-light", "label": "Light" },
+        { "value": "scheme-dark", "label": "Dark" }
+      ],
+      "default": "default"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "instagram_post",
+      "name": "Instagram Post",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "instagram_handle",
+          "label": "Instagram Handle",
+          "default": "@username"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product Social Carousel",
+      "category": "Social",
+      "blocks": [
+        {
+          "type": "instagram_post"
+        },
+        {
+          "type": "instagram_post"
+        },
+        {
+          "type": "instagram_post"
+        },
+        {
+          "type": "instagram_post"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
+
+<style>
+.home-social-carousel {
+  text-align: left;
+  background-color: #fcf7ea;
+  padding: 40px 0;
+}
+
+.home-social-carousel .main-contain {
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 100px 40px;
+}
+
+.socials-container {
+  width: 100%;
+}
+
+/* Carousel Wrapper */
+.instagram-carousel-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: visible;
+}
+
+/* Navigation Arrows */
+.carousel-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 100;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.carousel-nav:hover {
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.carousel-nav-prev {
+  left: -24px;
+}
+
+.carousel-nav-next {
+  right: -24px;
+}
+
+.carousel-nav svg {
+  color: #333;
+}
+
+/* Carousel Container */
+.instagram-carousel {
+  display: flex;
+  gap: 20px;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  position: relative;
+  z-index: 1;
+}
+
+/* Desktop: Show 3 items, each takes 1/3 of width */
+@media (min-width: 768px) {
+  .instagram-item {
+    min-width: calc(33.333% - 14px);
+    max-width: calc(33.333% - 14px);
+    flex-shrink: 0;
+  }
+}
+
+.instagram-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* Mobile Styles */
+@media (max-width: 767px) {
+  .home-social-carousel {
+    padding: 40px 20px 80px;
+  }
+
+  .instagram-carousel-wrapper {
+    padding-bottom: 70px; /* Add space below for arrows */
+  }
+
+  /* Mobile: Show 1 item at full width */
+  .instagram-item {
+    min-width: 100%;
+    max-width: 100%;
+    flex-shrink: 0;
+  }
+
+  .home-social-carousel .main-contain {
+    padding: 40px 20px 0;
+  }
+
+  /* Position arrows below the image, centered */
+  .carousel-nav {
+    top: auto;
+    bottom: 0;
+    transform: none;
+  }
+
+  .carousel-nav-prev {
+    left: 50%;
+    margin-left: -53px;
+  }
+
+  .carousel-nav-next {
+    right: 50%;
+    margin-right: -53px;
+  }
+}
+</style>
