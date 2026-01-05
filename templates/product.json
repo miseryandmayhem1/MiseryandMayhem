@@ -7,8 +7,15 @@
           "type": "title",
           "settings": {}
         },
+        "yotpo_product_reviews_star_rating_C7rM33": {
+          "type": "shopify:\/\/apps\/yotpo-product-reviews\/blocks\/star-rating\/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+          "settings": {
+            "product": "{{product}}"
+          }
+        },
         "price": {
           "type": "price",
+          "disabled": true,
           "settings": {}
         },
         "description": {
@@ -21,6 +28,10 @@
             "picker_type": "button",
             "swatch_shape": "none"
           }
+        },
+        "recharge_subscriptions_subscription_widget_v2_Crjmzk": {
+          "type": "shopify:\/\/apps\/recharge-subscriptions\/blocks\/subscription-widget-v2\/371eed76-0b44-4869-9813-730372ea378e",
+          "settings": {}
         },
         "buy_buttons": {
           "type": "buy_buttons",
@@ -42,9 +53,11 @@
       },
       "block_order": [
         "title",
+        "yotpo_product_reviews_star_rating_C7rM33",
         "price",
         "description",
         "variant_picker",
+        "recharge_subscriptions_subscription_widget_v2_Crjmzk",
         "buy_buttons",
         "quantity_selector",
         "share"
@@ -68,38 +81,8 @@
         "padding_bottom": 40
       }
     },
-    "1412692323f93b4fed8b": {
+    "1763329191a6f8bc13": {
       "type": "apps",
-      "blocks": {
-        "0d41ef15-1c12-446b-a3c9-a82289e7fcd0": {
-          "type": "shopify:\/\/apps\/yotpo-product-reviews\/blocks\/reviews\/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
-          "settings": {
-            "product": "trial-2-pack"
-          }
-        }
-      },
-      "block_order": [
-        "0d41ef15-1c12-446b-a3c9-a82289e7fcd0"
-      ],
-      "disabled": true,
-      "settings": {
-        "include_margins": true
-      }
-    },
-    "17630140943e0c7e3e": {
-      "type": "apps",
-      "blocks": {
-        "yotpo_product_reviews_reviews_carousel_F8h8W6": {
-          "type": "shopify:\/\/apps\/yotpo-product-reviews\/blocks\/reviews_carousel\/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
-          "settings": {
-            "product": "trial-2-pack"
-          }
-        }
-      },
-      "block_order": [
-        "yotpo_product_reviews_reviews_carousel_F8h8W6"
-      ],
-      "disabled": true,
       "settings": {
         "include_margins": true
       }
@@ -143,6 +126,41 @@
         "color_scheme": ""
       }
     },
+    "1412692323f93b4fed8b": {
+      "type": "apps",
+      "blocks": {
+        "0d41ef15-1c12-446b-a3c9-a82289e7fcd0": {
+          "type": "shopify:\/\/apps\/yotpo-product-reviews\/blocks\/reviews\/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+          "settings": {
+            "product": "apple-cinnamon-protein-oatmeal"
+          }
+        }
+      },
+      "block_order": [
+        "0d41ef15-1c12-446b-a3c9-a82289e7fcd0"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "17630140943e0c7e3e": {
+      "type": "apps",
+      "blocks": {
+        "yotpo_product_reviews_reviews_carousel_F8h8W6": {
+          "type": "shopify:\/\/apps\/yotpo-product-reviews\/blocks\/reviews_carousel\/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+          "settings": {
+            "product": "apple-cinnamon-protein-oatmeal"
+          }
+        }
+      },
+      "block_order": [
+        "yotpo_product_reviews_reviews_carousel_F8h8W6"
+      ],
+      "disabled": true,
+      "settings": {
+        "include_margins": true
+      }
+    },
     "related-products": {
       "type": "related-products",
       "settings": {
@@ -172,10 +190,11 @@
   },
   "order": [
     "main",
-    "related-products",
+    "1763329191a6f8bc13",
+    "home_how_it_fits_MKtrpD",
     "1412692323f93b4fed8b",
     "17630140943e0c7e3e",
-    "home_how_it_fits_MKtrpD",
+    "related-products",
     "home_email_cANeJm"
   ]
 }

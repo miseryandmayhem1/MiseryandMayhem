@@ -2046,6 +2046,14 @@ body .customer.account.section-template--16544309117063__main-padding h2 {
   image-rendering: crisp-edges;
 } */
 
+/* various yotpo widget */
+
 .yotpo-reviews-carousel-widget-container {
   width: 100% !important;
+}
+
+@media screen and (min-width: 768px) {
+  body .shopify-block.recharge-subscription-widget {
+    justify-content: flex-start;
+  }
 }

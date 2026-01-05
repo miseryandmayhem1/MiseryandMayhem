@@ -448,5 +448,14 @@
         }
       }
     }
+  },
+  "platform_customizations": {
+    "custom_css": [
+      ".reviews-carousel-card-container {border: 3px solid #00b7c2; border-radius: 8px;}",
+      ".yotpo-layout-header-wrapper {border: 3px solid #00b7c2; border-radius: 8px; background-color: white;}",
+      ".card-container {border: 3px solid #00b7c2; border-radius: 8px; background-color: white !important;}",
+      ".product-form__submit.button--secondary {border: 3px solid #f37021; background-color: #f37021 !important; color: #ffffff !important; border-radius: 8px !important;}",
+      ".product-form__submit.button--secondary:hover {border: 3px solid #d96320; background-color: #d96320 !important; color: #ffffff !important;}"
+    ]
   }
 }

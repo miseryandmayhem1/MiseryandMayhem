@@ -7,8 +7,15 @@
           "type": "title",
           "settings": {}
         },
+        "yotpo_product_reviews_star_rating_YTEtL8": {
+          "type": "shopify:\/\/apps\/yotpo-product-reviews\/blocks\/star-rating\/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+          "settings": {
+            "product": "apple-cinnamon-protein-oatmeal"
+          }
+        },
         "price": {
           "type": "price",
+          "disabled": true,
           "settings": {}
         },
         "bundle_price_script": {
@@ -28,8 +35,8 @@
             "swatch_shape": "none"
           }
         },
-        "yotpo_subscriptions_app_block_jQ3VrP": {
-          "type": "shopify:\/\/apps\/yotpo-subscriptions\/blocks\/app-block\/ef25e582-ada5-4bb0-b4e7-f94e97ab1bb4",
+        "recharge_subscriptions_subscription_widget_v2_RQXCqN": {
+          "type": "shopify:\/\/apps\/recharge-subscriptions\/blocks\/subscription-widget-v2\/371eed76-0b44-4869-9813-730372ea378e",
           "settings": {}
         },
         "buy_buttons": {
@@ -52,11 +59,12 @@
       },
       "block_order": [
         "title",
+        "yotpo_product_reviews_star_rating_YTEtL8",
         "price",
         "bundle_price_script",
         "description",
         "variant_picker",
-        "yotpo_subscriptions_app_block_jQ3VrP",
+        "recharge_subscriptions_subscription_widget_v2_RQXCqN",
         "buy_buttons",
         "quantity_selector",
         "share"
@@ -80,6 +88,68 @@
         "padding_bottom": 40
       }
     },
+    "1763332823a751d98c": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "home_how_it_fits_UzeVXF": {
+      "type": "home-how-it-fits",
+      "blocks": {
+        "item_3H9kLQ": {
+          "type": "item",
+          "settings": {
+            "item_image": "shopify:\/\/shop_images\/how1.png",
+            "item_title": "Before Your Workout",
+            "item_description": "Our balanced combination of carbs and protein will not only fuel you through your training but also help your body recover"
+          }
+        },
+        "item_b3fd8d": {
+          "type": "item",
+          "settings": {
+            "item_image": "shopify:\/\/shop_images\/how2.png",
+            "item_title": "The Big Rush",
+            "item_description": "Whether it's getting your kids off to school or trying to beat traffic, our complete breakfast is ready in 3 minutes or less"
+          }
+        },
+        "item_H7rLgX": {
+          "type": "item",
+          "settings": {
+            "item_image": "shopify:\/\/shop_images\/how3.png",
+            "item_title": "Take Us Anywhere",
+            "item_description": "When you can't find your ideal breakfast at the office or the airport, bring us with you instead"
+          }
+        }
+      },
+      "block_order": [
+        "item_3H9kLQ",
+        "item_b3fd8d",
+        "item_H7rLgX"
+      ],
+      "name": "How It Fits Section",
+      "settings": {
+        "header_title": "How Dawnbreaker fits into your morning",
+        "color_scheme": ""
+      }
+    },
+    "17358434865c296c80": {
+      "type": "apps",
+      "blocks": {
+        "yotpo_product_reviews_reviews_jCbezq": {
+          "type": "shopify:\/\/apps\/yotpo-product-reviews\/blocks\/reviews\/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+          "settings": {
+            "product": "apple-cinnamon-protein-oatmeal"
+          }
+        }
+      },
+      "block_order": [
+        "yotpo_product_reviews_reviews_jCbezq"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
     "related-products": {
       "type": "related-products",
       "settings": {
@@ -98,19 +168,6 @@
         "padding_bottom": 28
       }
     },
-    "bundle_and_save_6Ce6EF": {
-      "type": "bundle-and-save",
-      "disabled": true,
-      "settings": {
-        "title": "Try all three",
-        "description": "Don't know which flavor to start with or just love them all? Order our limited-time bundle of delicious, protein-packed oats.",
-        "second_description": "<strong>6 Apple Cinnamon<br>\n6 Classic<br>\n6 Maple<\/strong>",
-        "bundle_product": "oatmeal-bundle",
-        "bundle_image": "shopify:\/\/shop_images\/bundle-new_c1c5afa7-700f-40a0-929c-2945d06c90d7.png",
-        "button_text": "Add to Cart",
-        "color_scheme": ""
-      }
-    },
     "home_email_cANeJm": {
       "type": "home-email",
       "settings": {
@@ -118,19 +175,14 @@
         "sub_text": "Fuel your inbox with recipes, releases, rewards, and more every month.",
         "button_text": "Join Now"
       }
-    },
-    "17358434865c296c80": {
-      "type": "apps",
-      "settings": {
-        "include_margins": true
-      }
     }
   },
   "order": [
     "main",
+    "1763332823a751d98c",
+    "home_how_it_fits_UzeVXF",
+    "17358434865c296c80",
     "related-products",
-    "bundle_and_save_6Ce6EF",
-    "home_email_cANeJm",
-    "17358434865c296c80"
+    "home_email_cANeJm"
   ]
 }
