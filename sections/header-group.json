@@ -1,31 +1,16 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "name": "t:sections.header.name",
   "type": "header",
   "sections": {
-    "announcement-bar": {
-      "type": "announcement-bar",
-      "blocks": {
-        "announcement-bar-0": {
-          "type": "announcement",
-          "settings": {
-            "text": "Click here to try Dawnbreaker Oats for just $7",
-            "link": "\/products\/trial-2-pack"
-          }
-        }
-      },
-      "block_order": [
-        "announcement-bar-0"
-      ],
-      "settings": {
-        "color_scheme": "scheme-1",
-        "show_line_separator": true,
-        "show_social": false,
-        "auto_rotate": false,
-        "change_slides_speed": 5,
-        "enable_country_selector": false,
-        "enable_language_selector": false
-      }
-    },
     "header": {
       "type": "header",
       "custom_css": [
@@ -46,10 +31,35 @@
         "padding_top": 20,
         "padding_bottom": 20
       }
+    },
+    "announcement_bar_XDCUGh": {
+      "type": "announcement-bar",
+      "blocks": {
+        "announcement_D4tjYM": {
+          "type": "announcement",
+          "settings": {
+            "text": "Free Shipping on order over $60!",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "announcement_D4tjYM"
+      ],
+      "name": "t:sections.announcement-bar.presets.name",
+      "settings": {
+        "color_scheme": "scheme-38af5a64-8703-4a1d-8643-c8b28dea0e88",
+        "show_line_separator": true,
+        "show_social": false,
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "enable_country_selector": false,
+        "enable_language_selector": false
+      }
     }
   },
   "order": [
-    "announcement-bar",
-    "header"
+    "header",
+    "announcement_bar_XDCUGh"
   ]
 }

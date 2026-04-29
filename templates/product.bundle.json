@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -8,7 +17,7 @@
           "settings": {}
         },
         "yotpo_product_reviews_star_rating_YTEtL8": {
-          "type": "shopify:\/\/apps\/yotpo-product-reviews\/blocks\/star-rating\/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+          "type": "shopify://apps/yotpo-product-reviews/blocks/star-rating/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
           "settings": {
             "product": "apple-cinnamon-protein-oatmeal"
           }
@@ -21,7 +30,7 @@
         "bundle_price_script": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "<script>\n  document.addEventListener('DOMContentLoaded', function() {\n    \/\/ Add event listeners to quantity buttons and input\n    const quantityInput = document.querySelector('input[name=\"quantity\"]');\n    const priceElements = document.querySelectorAll('.price');\n    const priceElement = priceElements[0]; \/\/ First price element\n    const quantityButtons = document.querySelectorAll('.quantity__button');\n    \n    if (quantityInput && priceElement) {\n      const basePrice = {{ product.price }};\n      \n      \/\/ Update price on input change\n      quantityInput.addEventListener('change', updateBundlePrice);\n      quantityInput.addEventListener('input', updateBundlePrice);\n      \n      \/\/ Update price when quantity buttons are clicked\n      if (quantityButtons) {\n        quantityButtons.forEach(button => {\n          button.addEventListener('click', function() {\n            \/\/ Use setTimeout to ensure quantity has been updated\n            setTimeout(updateBundlePrice, 10);\n          });\n        });\n      }\n      \n      \/\/ Initial price update\n      updateBundlePrice();\n      \n      function updateBundlePrice() {\n        const quantity = parseInt(quantityInput.value, 10) || 1;\n        const totalPrice = basePrice * quantity;\n        \n        \/\/ Find the price amount element inside the price container\n        const priceAmountElement = priceElement.querySelector('.price__regular .price-item');\n        if (priceAmountElement) {\n          \/\/ Add highlight class\n          priceAmountElement.classList.add('price-updating');\n          \n          \/\/ Update the price\n          priceAmountElement.textContent = Shopify.formatMoney(totalPrice, {{ shop.money_format | json }});\n          \n          \/\/ Remove highlight class after animation\n          setTimeout(() => {\n            priceAmountElement.classList.remove('price-updating');\n          }, 300);\n        }\n      }\n    }\n  });\n<\/script>\n\n<style>\n  @keyframes price-update {\n    0% { transform: scale(1); }\n    50% { transform: scale(1.06); }\n    100% { transform: scale(1); }\n  }\n  \n  .price-updating {\n    animation: price-update 0.3s ease-in-out;\n  }\n<\/style>"
+            "custom_liquid": "<script>\n  document.addEventListener('DOMContentLoaded', function() {\n    // Add event listeners to quantity buttons and input\n    const quantityInput = document.querySelector('input[name=\"quantity\"]');\n    const priceElements = document.querySelectorAll('.price');\n    const priceElement = priceElements[0]; // First price element\n    const quantityButtons = document.querySelectorAll('.quantity__button');\n    \n    if (quantityInput && priceElement) {\n      const basePrice = {{ product.price }};\n      \n      // Update price on input change\n      quantityInput.addEventListener('change', updateBundlePrice);\n      quantityInput.addEventListener('input', updateBundlePrice);\n      \n      // Update price when quantity buttons are clicked\n      if (quantityButtons) {\n        quantityButtons.forEach(button => {\n          button.addEventListener('click', function() {\n            // Use setTimeout to ensure quantity has been updated\n            setTimeout(updateBundlePrice, 10);\n          });\n        });\n      }\n      \n      // Initial price update\n      updateBundlePrice();\n      \n      function updateBundlePrice() {\n        const quantity = parseInt(quantityInput.value, 10) || 1;\n        const totalPrice = basePrice * quantity;\n        \n        // Find the price amount element inside the price container\n        const priceAmountElement = priceElement.querySelector('.price__regular .price-item');\n        if (priceAmountElement) {\n          // Add highlight class\n          priceAmountElement.classList.add('price-updating');\n          \n          // Update the price\n          priceAmountElement.textContent = Shopify.formatMoney(totalPrice, {{ shop.money_format | json }});\n          \n          // Remove highlight class after animation\n          setTimeout(() => {\n            priceAmountElement.classList.remove('price-updating');\n          }, 300);\n        }\n      }\n    }\n  });\n</script>\n\n<style>\n  @keyframes price-update {\n    0% { transform: scale(1); }\n    50% { transform: scale(1.06); }\n    100% { transform: scale(1); }\n  }\n  \n  .price-updating {\n    animation: price-update 0.3s ease-in-out;\n  }\n</style>"
           }
         },
         "description": {
@@ -36,7 +45,7 @@
           }
         },
         "recharge_subscriptions_subscription_widget_v2_RQXCqN": {
-          "type": "shopify:\/\/apps\/recharge-subscriptions\/blocks\/subscription-widget-v2\/371eed76-0b44-4869-9813-730372ea378e",
+          "type": "shopify://apps/recharge-subscriptions/blocks/subscription-widget-v2/371eed76-0b44-4869-9813-730372ea378e",
           "settings": {}
         },
         "buy_buttons": {
@@ -70,7 +79,7 @@
         "share"
       ],
       "custom_css": [
-        "@media screen and (min-width: 768px) {.product__info-container {\/* padding: 3rem; border-radius: 5px; border: 2px solid green; *\/ }}"
+        "@media screen and (min-width: 768px) {.product__info-container {/* padding: 3rem; border-radius: 5px; border: 2px solid green; */ }}"
       ],
       "settings": {
         "enable_sticky_info": false,
@@ -100,7 +109,7 @@
         "item_3H9kLQ": {
           "type": "item",
           "settings": {
-            "item_image": "shopify:\/\/shop_images\/how1.png",
+            "item_image": "shopify://shop_images/how1.png",
             "item_title": "Before Your Workout",
             "item_description": "Our balanced combination of carbs and protein will not only fuel you through your training but also help your body recover"
           }
@@ -108,7 +117,7 @@
         "item_b3fd8d": {
           "type": "item",
           "settings": {
-            "item_image": "shopify:\/\/shop_images\/how2.png",
+            "item_image": "shopify://shop_images/how2.png",
             "item_title": "The Big Rush",
             "item_description": "Whether it's getting your kids off to school or trying to beat traffic, our complete breakfast is ready in 3 minutes or less"
           }
@@ -116,7 +125,7 @@
         "item_H7rLgX": {
           "type": "item",
           "settings": {
-            "item_image": "shopify:\/\/shop_images\/how3.png",
+            "item_image": "shopify://shop_images/how3.png",
             "item_title": "Take Us Anywhere",
             "item_description": "When you can't find your ideal breakfast at the office or the airport, bring us with you instead"
           }
@@ -137,7 +146,7 @@
       "type": "apps",
       "blocks": {
         "yotpo_product_reviews_reviews_jCbezq": {
-          "type": "shopify:\/\/apps\/yotpo-product-reviews\/blocks\/reviews\/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+          "type": "shopify://apps/yotpo-product-reviews/blocks/reviews/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
           "settings": {
             "product": "apple-cinnamon-protein-oatmeal"
           }

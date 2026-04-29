@@ -1,20 +1,30 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
       "type": "main-product-trial",
       "blocks": {
-        "title": {
-          "type": "title",
-          "settings": {}
-        },
-        "yotpo_product_reviews_star_rating_KH9KxP": {
-          "type": "shopify:\/\/apps\/yotpo-product-reviews\/blocks\/star-rating\/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+        "yotpo_product_reviews_star_rating_V34LrX": {
+          "type": "shopify://apps/yotpo-product-reviews/blocks/star-rating/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
           "settings": {
             "product": "{{product}}"
           }
         },
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
         "price": {
           "type": "price",
+          "disabled": true,
           "settings": {}
         },
         "description": {
@@ -27,6 +37,10 @@
             "picker_type": "button",
             "swatch_shape": "none"
           }
+        },
+        "recharge_subscriptions_subscription_widget_v2_dDeryY": {
+          "type": "shopify://apps/recharge-subscriptions/blocks/subscription-widget-v2/371eed76-0b44-4869-9813-730372ea378e",
+          "settings": {}
         },
         "buy_buttons": {
           "type": "buy_buttons",
@@ -47,11 +61,12 @@
         }
       },
       "block_order": [
+        "yotpo_product_reviews_star_rating_V34LrX",
         "title",
-        "yotpo_product_reviews_star_rating_KH9KxP",
         "price",
         "description",
         "variant_picker",
+        "recharge_subscriptions_subscription_widget_v2_dDeryY",
         "buy_buttons",
         "quantity_selector",
         "share"
@@ -72,28 +87,21 @@
         "padding_bottom": 40
       }
     },
-    "yotpo_reviews": {
-      "type": "apps",
-      "blocks": {
-        "yotpo_reviews_block": {
-          "type": "shopify:\/\/apps\/yotpo-product-reviews\/blocks\/reviews\/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
-          "settings": {
-            "product": "maple-protein-oatmeal"
-          }
-        }
-      },
-      "block_order": [
-        "yotpo_reviews_block"
-      ],
+    "custom_liquid_bTqgHX": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "include_margins": true
+        "custom_liquid": "<div style=\"background:linear-gradient(135deg,#1a9e96 0%,#0d7a74 100%);padding:36px 28px;text-align:center;border-radius:16px;margin:24px auto;max-width:680px;position:relative;overflow:hidden;box-shadow:0 6px 32px rgba(26,158,150,0.25);\">\n\n  <div style=\"position:absolute;top:0;left:0;right:0;height:5px;background:linear-gradient(90deg,#f5b800,#e85d1a,#f5b800);\"></div>\n\n  <p style=\"font-family:'Bebas Neue',sans-serif;font-size:15px;letter-spacing:2px;color:#f5b800;margin:0 0 8px 0;text-transform:uppercase;\">\n    Can't pick just one?\n  </p>\n  <h3 style=\"font-family:'Bebas Neue',sans-serif;font-size:44px;color:#ffffff;margin:0 0 12px 0;line-height:1;letter-spacing:1px;\">\n    Mix &amp; Match All 3 Flavors.\n  </h3>\n  <p style=\"font-family:'Nunito',sans-serif;font-size:15px;color:rgba(255,255,255,0.92);margin:0 0 24px 0;max-width:380px;display:inline-block;line-height:1.6;\">\n    Build your own 6-pack your way. Load up on one or split them however you want.\n  </p>\n\n  <a href=\"https://dawnbreakeroats.com/pages/6-pack-bundle\" style=\"display:inline-block;background:#e85d1a;color:#ffffff;font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:2px;padding:16px 44px;border-radius:10px;text-decoration:none;box-shadow:0 4px 24px rgba(232,93,26,0.50);\">\n    Build Your Bundle →\n  </a>\n</div>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     },
     "yotpo_carousel": {
       "type": "apps",
       "blocks": {
         "yotpo_carousel_block": {
-          "type": "shopify:\/\/apps\/yotpo-product-reviews\/blocks\/reviews_carousel\/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+          "type": "shopify://apps/yotpo-product-reviews/blocks/reviews_carousel/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
           "settings": {
             "product": "apple-cinnamon-protein-oatmeal"
           }
@@ -106,56 +114,13 @@
         "include_margins": true
       }
     },
-    "product_social_carousel_NhUEQG": {
-      "type": "product-social-carousel",
-      "blocks": {
-        "instagram_post_U8LnGq": {
-          "type": "instagram_post",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/07946A0D-B516-4C6D-85EC-DE70AADA2460.jpg",
-            "instagram_handle": "@username"
-          }
-        },
-        "instagram_post_833fhP": {
-          "type": "instagram_post",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/social4.jpg",
-            "instagram_handle": "@username"
-          }
-        },
-        "instagram_post_LERRmd": {
-          "type": "instagram_post",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/social3_dbde7ea8-98e0-43ca-b123-5f3241cd977c.jpg",
-            "instagram_handle": "@username"
-          }
-        },
-        "instagram_post_wF67Cd": {
-          "type": "instagram_post",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/social2_5cf889c2-b62c-43c8-bb23-7b6c418defaf.jpg",
-            "instagram_handle": "@username"
-          }
-        }
-      },
-      "block_order": [
-        "instagram_post_U8LnGq",
-        "instagram_post_833fhP",
-        "instagram_post_LERRmd",
-        "instagram_post_wF67Cd"
-      ],
-      "name": "Product Social Carousel",
-      "settings": {
-        "color_scheme": "default"
-      }
-    },
     "home_how_it_fits": {
       "type": "home-how-it-fits",
       "blocks": {
         "item_1": {
           "type": "item",
           "settings": {
-            "item_image": "shopify:\/\/shop_images\/how1.png",
+            "item_image": "shopify://shop_images/how1.png",
             "item_title": "Before Your Workout",
             "item_description": "Our balanced combination of carbs and protein will not only fuel you through your training but also help your body recover"
           }
@@ -163,7 +128,7 @@
         "item_2": {
           "type": "item",
           "settings": {
-            "item_image": "shopify:\/\/shop_images\/how2.png",
+            "item_image": "shopify://shop_images/how2.png",
             "item_title": "The Big Rush",
             "item_description": "Whether it's getting your kids off to school or trying to beat traffic, our complete breakfast is ready in 3 minutes or less"
           }
@@ -171,7 +136,7 @@
         "item_3": {
           "type": "item",
           "settings": {
-            "item_image": "shopify:\/\/shop_images\/how3.png",
+            "item_image": "shopify://shop_images/how3.png",
             "item_title": "Take Us Anywhere",
             "item_description": "When you can't find your ideal breakfast at the office or the airport, bring us with you instead"
           }
@@ -187,6 +152,66 @@
         "color_scheme": ""
       }
     },
+    "yotpo_reviews": {
+      "type": "apps",
+      "blocks": {
+        "yotpo_reviews_block": {
+          "type": "shopify://apps/yotpo-product-reviews/blocks/reviews/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+          "settings": {
+            "product": "maple-protein-oatmeal"
+          }
+        }
+      },
+      "block_order": [
+        "yotpo_reviews_block"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "product_social_carousel_NhUEQG": {
+      "type": "product-social-carousel",
+      "blocks": {
+        "instagram_post_U8LnGq": {
+          "type": "instagram_post",
+          "settings": {
+            "image": "shopify://shop_images/07946A0D-B516-4C6D-85EC-DE70AADA2460.jpg",
+            "instagram_handle": "@username"
+          }
+        },
+        "instagram_post_833fhP": {
+          "type": "instagram_post",
+          "settings": {
+            "image": "shopify://shop_images/social4.jpg",
+            "instagram_handle": "@username"
+          }
+        },
+        "instagram_post_LERRmd": {
+          "type": "instagram_post",
+          "settings": {
+            "image": "shopify://shop_images/social3_dbde7ea8-98e0-43ca-b123-5f3241cd977c.jpg",
+            "instagram_handle": "@username"
+          }
+        },
+        "instagram_post_wF67Cd": {
+          "type": "instagram_post",
+          "settings": {
+            "image": "shopify://shop_images/social2_5cf889c2-b62c-43c8-bb23-7b6c418defaf.jpg",
+            "instagram_handle": "@username"
+          }
+        }
+      },
+      "block_order": [
+        "instagram_post_U8LnGq",
+        "instagram_post_833fhP",
+        "instagram_post_LERRmd",
+        "instagram_post_wF67Cd"
+      ],
+      "name": "Product Social Carousel",
+      "settings": {
+        "color_scheme": "default"
+      }
+    },
     "home_email": {
       "type": "home-email",
       "settings": {
@@ -194,14 +219,22 @@
         "sub_text": "Fuel your inbox with recipes, releases, rewards, and more every month.",
         "button_text": "Join Now"
       }
+    },
+    "17634961563f1eb558": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
     "main",
+    "custom_liquid_bTqgHX",
     "yotpo_carousel",
     "home_how_it_fits",
     "yotpo_reviews",
     "product_social_carousel_NhUEQG",
-    "home_email"
+    "home_email",
+    "17634961563f1eb558"
   ]
 }

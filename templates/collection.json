@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "hero": {
@@ -30,9 +39,9 @@
       "settings": {
         "title": "Try all three",
         "description": "Don’t know which flavor to start with or just love them all? Order our limited-time bundle of delicious, protein-packed oats.",
-        "second_description": "<strong>6 Apple Cinnamon<br>\n6 Classic<br>\n6 Maple<\/strong>",
+        "second_description": "<strong>6 Apple Cinnamon<br>\n6 Classic<br>\n6 Maple</strong>",
         "bundle_product": "oatmeal-bundle",
-        "bundle_image": "shopify:\/\/shop_images\/bundle-new_c1c5afa7-700f-40a0-929c-2945d06c90d7.png",
+        "bundle_image": "shopify://shop_images/bundle-new_c1c5afa7-700f-40a0-929c-2945d06c90d7.png",
         "button_text": "Buy now",
         "color_scheme": ""
       }

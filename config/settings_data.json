@@ -1,8 +1,17 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "current": {
-    "logo": "shopify:\/\/shop_images\/dawn-nav-logo.png",
+    "logo": "shopify://shop_images/dawn-nav-logo.png",
     "logo_width": 250,
-    "favicon": "shopify:\/\/shop_images\/dawn-favicon.png",
+    "favicon": "shopify://shop_images/dawn-favicon.png",
     "type_header_font": "noticia_text_n4",
     "heading_scale": 100,
     "type_body_font": "assistant_n4",
@@ -99,7 +108,7 @@
     "sale_badge_color_scheme": "scheme-38af5a64-8703-4a1d-8643-c8b28dea0e88",
     "sold_out_badge_color_scheme": "scheme-38af5a64-8703-4a1d-8643-c8b28dea0e88",
     "brand_headline": "",
-    "brand_description": "<p><\/p>",
+    "brand_description": "<p></p>",
     "brand_image_width": 100,
     "social_facebook_link": "",
     "social_instagram_link": "",
@@ -136,9 +145,9 @@
       "custom-footer": {
         "type": "custom-footer",
         "settings": {
-          "footer_logo": "shopify:\/\/shop_images\/dawn-footer-logo.png",
+          "footer_logo": "shopify://shop_images/dawn-footer-logo.png",
           "link_1": "Oats",
-          "link_1_url": "shopify:\/\/collections\/oatmeal-collection",
+          "link_1_url": "shopify://collections/oatmeal-collection",
           "link_2": "",
           "link_2_url": "",
           "link_3": "",
@@ -148,11 +157,11 @@
           "link_5": "Contact Us",
           "link_5_url": "mailto:support@dawnbreakeroats.com",
           "link_6": "",
-          "link_6_url": "shopify:\/\/pages\/splash",
+          "link_6_url": "shopify://pages/splash",
           "link_7": "Privacy Policy",
-          "link_7_url": "shopify:\/\/pages\/privacy-policy",
+          "link_7_url": "shopify://pages/privacy-policy",
           "link_8": "Terms & Conditions",
-          "link_8_url": "shopify:\/\/pages\/terms-of-service",
+          "link_8_url": "shopify://pages/terms-of-service",
           "copyright_text": "©2025 Dawnbreaker"
         }
       },
@@ -170,12 +179,12 @@
     "content_for_index": [],
     "blocks": {
       "7570552984445421165": {
-        "type": "shopify:\/\/apps\/yotpo-product-reviews-ugc\/blocks\/settings\/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+        "type": "shopify://apps/yotpo-product-reviews-ugc/blocks/settings/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
         "disabled": false,
         "settings": {}
       },
       "8962992520437913685": {
-        "type": "shopify:\/\/apps\/yotpo-loyalty-rewards\/blocks\/loader-app-embed-block\/2f9660df-5018-4e02-9868-ee1fb88d6ccd",
+        "type": "shopify://apps/yotpo-loyalty-rewards/blocks/loader-app-embed-block/2f9660df-5018-4e02-9868-ee1fb88d6ccd",
         "disabled": true,
         "settings": {
           "inject_modules_loader": true,
@@ -183,7 +192,12 @@
         }
       },
       "855628211100114053": {
-        "type": "shopify:\/\/apps\/klaviyo-email-marketing-sms\/blocks\/klaviyo-onsite-embed\/2632fe16-c075-4321-a88b-50b567f42507",
+        "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/klaviyo-onsite-embed/2632fe16-c075-4321-a88b-50b567f42507",
+        "disabled": false,
+        "settings": {}
+      },
+      "17786631168105820736": {
+        "type": "shopify://apps/sb-disable-right-click/blocks/sb_security/80c619f2-01dc-4dbd-b114-bdca3d0b6837",
         "disabled": false,
         "settings": {}
       }
@@ -413,7 +427,7 @@
       "sale_badge_color_scheme": "scheme-4",
       "sold_out_badge_color_scheme": "scheme-3",
       "brand_headline": "",
-      "brand_description": "<p><\/p>",
+      "brand_description": "<p></p>",
       "brand_image_width": 100,
       "social_twitter_link": "",
       "social_facebook_link": "",

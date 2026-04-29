@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "hero_video": {
@@ -8,12 +17,12 @@
         "mobile_video": "",
         "autoplay": true,
         "loop": true,
-        "desktop_image": "shopify:\/\/shop_images\/home-hero-desktop.jpg",
-        "mobile_image": "shopify:\/\/shop_images\/home-hero-mobile.jpg",
-        "header_text": "Meet the new champion of breakfast",
+        "desktop_image": "shopify://shop_images/home-hero-desktop.jpg",
+        "mobile_image": "shopify://shop_images/home-hero-mobile.jpg",
+        "header_text": "Your New Breakfast Routine is Here",
         "header_subtext": "",
-        "subheader_text": "The best protein oatmeal with nothing to hide.",
-        "button_link": "shopify:\/\/collections\/oatmeal-collection",
+        "subheader_text": "High Protein Oats Ready in Just 3 Minutes",
+        "button_link": "shopify://collections/oatmeal-collection",
         "button_text": "Buy Oats"
       }
     },
@@ -22,9 +31,9 @@
       "settings": {
         "title": "Bundle and Save",
         "description": "Don't know which flavor to start with or just love them all? Order our limited time bundle of delicious gluten free, high protein oatmeal",
-        "second_description": "<strong>10 Apple Cinnamon<br>\n10 Classic<br>\n10 Maple<\/strong>",
+        "second_description": "<strong>10 Apple Cinnamon<br>\n10 Classic<br>\n10 Maple</strong>",
         "bundle_product": "oats-bundle",
-        "bundle_image": "shopify:\/\/shop_images\/home-dawn-bundle-desktop.png",
+        "bundle_image": "shopify://shop_images/home-dawn-bundle-desktop.png",
         "button_text": "Add to Cart",
         "color_scheme": "scheme-38af5a64-8703-4a1d-8643-c8b28dea0e88"
       }
@@ -99,11 +108,11 @@
         "text_line_3"
       ],
       "settings": {
-        "snake_image": "shopify:\/\/shop_images\/snake-to-dawn.png",
+        "snake_image": "shopify://shop_images/snake-to-dawn.png",
         "header_title": "We didn't compromise on taste or ingredients",
         "color_scheme": "scheme-38af5a64-8703-4a1d-8643-c8b28dea0e88",
         "button_text": "Browse Oatmeal",
-        "button_link": "shopify:\/\/collections\/oatmeal-collection"
+        "button_link": "shopify://collections/oatmeal-collection"
       }
     },
     "home-madeof": {
@@ -154,7 +163,7 @@
         "badge_XAnAQG": {
           "type": "badge",
           "settings": {
-            "badge_image": "shopify:\/\/shop_images\/gf-black-transparent.png",
+            "badge_image": "shopify://shop_images/gf-black-transparent.png",
             "badge_alt_text": "Gluten Free",
             "badge_width": 100,
             "badge_height": 100
@@ -163,7 +172,7 @@
         "badge_ddgQGy": {
           "type": "badge",
           "settings": {
-            "badge_image": "shopify:\/\/shop_images\/kosher-black-transparent.png",
+            "badge_image": "shopify://shop_images/kosher-black-transparent.png",
             "badge_alt_text": "Kosher",
             "badge_width": 100,
             "badge_height": 100
@@ -172,7 +181,7 @@
         "badge_C6aTQd": {
           "type": "badge",
           "settings": {
-            "badge_image": "shopify:\/\/shop_images\/gmo-black-transparent.png",
+            "badge_image": "shopify://shop_images/gmo-black-transparent.png",
             "badge_alt_text": "Non GMO",
             "badge_width": 100,
             "badge_height": 100
@@ -202,7 +211,7 @@
         "how_it_fits_1": {
           "type": "item",
           "settings": {
-            "item_image": "shopify:\/\/shop_images\/how1.png",
+            "item_image": "shopify://shop_images/how1.png",
             "item_title": "Before Your Workout",
             "item_description": "Our balanced combination of carbs and protein will not only fuel you through your training but also help your body recover"
           }
@@ -210,7 +219,7 @@
         "how_it_fits_2": {
           "type": "item",
           "settings": {
-            "item_image": "shopify:\/\/shop_images\/how2.png",
+            "item_image": "shopify://shop_images/how2.png",
             "item_title": "The Big Rush",
             "item_description": "Whether it's getting your kids off to school or trying to beat traffic, our complete breakfast is ready in 3 minutes or less"
           }
@@ -218,7 +227,7 @@
         "how_it_fits_3": {
           "type": "item",
           "settings": {
-            "item_image": "shopify:\/\/shop_images\/how3.png",
+            "item_image": "shopify://shop_images/how3.png",
             "item_title": "Take Us Anywhere",
             "item_description": "When you can't find your ideal breakfast at the office or the airport, bring us with you instead"
           }
@@ -239,7 +248,7 @@
       "disabled": true,
       "settings": {
         "heading": "The Best Breakfast for the Job",
-        "image": "shopify:\/\/shop_images\/Chart-2.png",
+        "image": "shopify://shop_images/Chart-2.png",
         "alt_text": "Misery & Mayhem is, pound for pound, better than all other breakfast options listed here."
       }
     },
@@ -249,7 +258,7 @@
         "review_block_1": {
           "type": "review",
           "settings": {
-            "stars_image": "shopify:\/\/shop_images\/4stars.png",
+            "stars_image": "shopify://shop_images/4stars.png",
             "review_text": "Dawnbreaker oatmeal is my go-to! It fuels my morning workouts and keeps me full until lunch.",
             "reviewer_name": "Sarah Johnson",
             "reviewer_location": "New York, NY"
@@ -258,8 +267,8 @@
         "review_block_2": {
           "type": "review",
           "settings": {
-            "stars_image": "shopify:\/\/shop_images\/5stars.png",
-            "review_text": "I feel energized and focused all day without the dreaded sugar crash.\u2028",
+            "stars_image": "shopify://shop_images/5stars.png",
+            "review_text": "I feel energized and focused all day without the dreaded sugar crash. ",
             "reviewer_name": "Michael Chen",
             "reviewer_location": "Los Angeles, CA"
           }
@@ -267,8 +276,8 @@
         "review_block_3": {
           "type": "review",
           "settings": {
-            "stars_image": "shopify:\/\/shop_images\/5stars.png",
-            "review_text": "Perfect for my camping trips! Easy to prepare and incredibly nutritious.\u2028",
+            "stars_image": "shopify://shop_images/5stars.png",
+            "review_text": "Perfect for my camping trips! Easy to prepare and incredibly nutritious. ",
             "reviewer_name": "Emma Wilson",
             "reviewer_location": "Chicago, IL"
           }
@@ -289,9 +298,9 @@
       "settings": {
         "title": "Bundle and Save",
         "description": "Don't know which flavor to start with or just love them all? Order our limited time bundle of delicious gluten free, high protein oatmeal",
-        "second_description": "<strong>10 Apple Cinnamon<br>\n10 Classic<br>\n10 Maple<\/strong>",
+        "second_description": "<strong>10 Apple Cinnamon<br>\n10 Classic<br>\n10 Maple</strong>",
         "bundle_product": "oats-bundle",
-        "bundle_image": "shopify:\/\/shop_images\/home-dawn-bundle-desktop.png",
+        "bundle_image": "shopify://shop_images/home-dawn-bundle-desktop.png",
         "button_text": "Add to Cart",
         "color_scheme": "scheme-38af5a64-8703-4a1d-8643-c8b28dea0e88"
       }
@@ -336,28 +345,28 @@
         "instagram_1": {
           "type": "instagram_post",
           "settings": {
-            "image": "shopify:\/\/shop_images\/social1_c0952ab1-8a0f-4c37-a285-4bb6caebad44.jpg",
+            "image": "shopify://shop_images/social1_c0952ab1-8a0f-4c37-a285-4bb6caebad44.jpg",
             "instagram_handle": "@username"
           }
         },
         "instagram_2": {
           "type": "instagram_post",
           "settings": {
-            "image": "shopify:\/\/shop_images\/social4.jpg",
+            "image": "shopify://shop_images/social4.jpg",
             "instagram_handle": "@username"
           }
         },
         "instagram_3": {
           "type": "instagram_post",
           "settings": {
-            "image": "shopify:\/\/shop_images\/social3_dbde7ea8-98e0-43ca-b123-5f3241cd977c.jpg",
+            "image": "shopify://shop_images/social3_dbde7ea8-98e0-43ca-b123-5f3241cd977c.jpg",
             "instagram_handle": "@username"
           }
         },
         "instagram_4": {
           "type": "instagram_post",
           "settings": {
-            "image": "shopify:\/\/shop_images\/social2_5cf889c2-b62c-43c8-bb23-7b6c418defaf.jpg",
+            "image": "shopify://shop_images/social2_5cf889c2-b62c-43c8-bb23-7b6c418defaf.jpg",
             "instagram_handle": "@username"
           }
         }
@@ -370,14 +379,14 @@
       ],
       "settings": {
         "heading": "Tag us on social",
-        "instagram_icon": "shopify:\/\/shop_images\/Instagram.svg",
-        "instagram_link": "https:\/\/www.instagram.com\/dawnbreakeroats\/",
-        "tiktok_icon": "shopify:\/\/shop_images\/TikTok_4826ab80-e2d2-44d6-afbb-c05fd7e2bac3.svg",
-        "tiktok_link": "https:\/\/www.tiktok.com\/@dawnbreakeroats?_t=ZT-8zyET5VsvYE&_r=1",
-        "x_icon": "shopify:\/\/shop_images\/x-logo.png",
-        "x_link": "https:\/\/x.com\/dawnbreakeroats",
-        "linkedin_icon": "shopify:\/\/shop_images\/linkedin.png",
-        "linkedin_link": "https:\/\/www.linkedin.com\/company\/dawnbreakeroats\/",
+        "instagram_icon": "shopify://shop_images/Instagram.svg",
+        "instagram_link": "https://www.instagram.com/dawnbreakeroats/",
+        "tiktok_icon": "shopify://shop_images/TikTok_4826ab80-e2d2-44d6-afbb-c05fd7e2bac3.svg",
+        "tiktok_link": "https://www.tiktok.com/@dawnbreakeroats?_t=ZT-8zyET5VsvYE&_r=1",
+        "x_icon": "shopify://shop_images/x-logo.png",
+        "x_link": "https://x.com/dawnbreakeroats",
+        "linkedin_icon": "shopify://shop_images/linkedin.png",
+        "linkedin_link": "https://www.linkedin.com/company/dawnbreakeroats/",
         "facebook_link": "",
         "color_scheme": "scheme-38af5a64-8703-4a1d-8643-c8b28dea0e88"
       }
